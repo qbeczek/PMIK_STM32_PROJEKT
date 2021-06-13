@@ -45,8 +45,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-int errTemp = 0;
-int errPres = 0;
+int8_t errTemp = 0;
+int8_t errPres = 0;
 double temp = 0.0;
 double pres = 0.0;
 int refreshScreen = 0;
@@ -94,8 +94,9 @@ int main(void)
   MX_SPI2_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
+  /*Initialize BMP280 sensor*/
   BMP280_init();
-
+  /*Initialize and test TFT display ST7735*/
   ST7735_Init(0);
   fillScreen(BLACK);
   ST7735_SetRotation(3);
@@ -107,9 +108,11 @@ int main(void)
   while (1)
   {
 	  	if((errTemp = BMP280_TempRead(&temp)) == BMP280_OK && (errPres = BMP280_PressRead(&pres)) == BMP280_OK){
+	  		//jeśli funkcje nie zwróciły błędów zostanie wykonana ta część funkcji- BMP280_OK = 0;
 	  		if(refreshScreen == 0){
 	  			refreshScreen = 2;
 	  			fillScreen(BLACK);
+	  			//jednokrotne odświeżenie wyświetlacza
 	  		}
 	  		writeMenu();
 	  		writeTemp(temp);
@@ -118,6 +121,8 @@ int main(void)
 	  		if(refreshScreen == 2){
 	  			refreshScreen = 0;
 	  			fillScreen(BLACK);
+	  			//jednokrotne odświeżenie wyświetlacza
+
 	  		}
 	  		errMenu(errTemp, errPres);
 	  	}

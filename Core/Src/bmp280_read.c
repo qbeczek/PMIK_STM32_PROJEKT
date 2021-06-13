@@ -15,6 +15,10 @@
 
 struct bmp280_dev bmp;
 
+/*
+ * Funkcja inicjalizująca czujnik bmp280
+ * Zwracana wartość rslt to kod błędu w przypadku błędu inicjalizacji
+ */
 int8_t BMP280_init(void) {
 	int8_t rslt;
     struct bmp280_config conf;
@@ -63,8 +67,11 @@ int8_t BMP280_init(void) {
     return rslt;
 
 }
-
-int BMP280_TempRead(double *temperature) {
+/*
+ * Funkcja odczytuje temperature z czujnika i przypisuje je do zmiennej globalnej
+ * Zwracana wartość rslt to kod błędu przy złym odczycie
+ */
+int8_t BMP280_TempRead(double *temperature) {
 	 int8_t errGet = 0;
 	 int8_t errComp = 0;
      struct bmp280_uncomp_data ucomp_data;
@@ -78,13 +85,16 @@ int BMP280_TempRead(double *temperature) {
       if(errComp = bmp280_get_comp_temp_double(&temp, ucomp_data.uncomp_temp, &bmp) != BMP280_OK){
     	  return errComp;
       }
-
-     /* Wyswietlenie wartosci */
+     /*przypisanie wartości temperatury do zmiennej globalnej*/
      *temperature = temp;
      return errComp;
 }
 
-int BMP280_PressRead(double *pressure) {
+/*
+ * Funkcja odczytuje cisnienie z czujnika i przypisuje je do zmiennej globalnej
+ * Zwracana wartość rslt to kod błędu przy złym odczycie
+ */
+int8_t BMP280_PressRead(double *pressure) {
 	 int8_t rslt;
      struct bmp280_uncomp_data ucomp_data;
 
@@ -96,7 +106,7 @@ int BMP280_PressRead(double *pressure) {
      /* Konwersja na liczby zmiennoprzecinkowe */
      rslt = bmp280_get_comp_pres_double(&pres, ucomp_data.uncomp_press, &bmp);
 
-     /* Wyswietlenie wartosci */
+     /*przypisanie wartości ciśnienia do zmiennej globalnej*/
      *pressure = pres;
 
      return rslt;
