@@ -1,6 +1,6 @@
 onScreen.c:15:6:writeTemp	32	static
 onScreen.c:20:6:writePress	32	static
 onScreen.c:25:6:writeMenu	24	static
-onScreen.c:30:6:errMenu	32	static
-onScreen.c:41:6:writeTempHighWarn	16	static
-onScreen.c:44:6:writeTempLowWarn	16	static
+onScreen.c:31:6:errMenu	32	static
+onScreen.c:42:6:writeTempHighWarn	32	static
+onScreen.c:48:6:writeTempLowWarn	16	static

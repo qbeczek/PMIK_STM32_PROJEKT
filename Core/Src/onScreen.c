@@ -25,6 +25,7 @@ void writePress(double pressure){
 void writeMenu(void){
 	ST7735_WriteString(5, 5, "Temperatura [st. C]", Font_7x10, YELLOW,BLACK);
 	ST7735_WriteString(5, 35, "Cisnienie [Pa]", Font_7x10, YELLOW,BLACK);
+	ST7735_WriteString(5, 65, "Stezenie PM10", Font_7x10, YELLOW,BLACK);
 }
 
 void errMenu(int errTemp, int errPres){
@@ -39,7 +40,10 @@ void errMenu(int errTemp, int errPres){
 
 
 void writeTempHighWarn(double temperature){
-
+	ST7735_WriteString(2, 5, "Wywietrz miejsce pracy", Font_7x10, BLACK,RED);
+	ST7735_WriteString(5, 20, "Aktualna temperatura:", Font_7x10, YELLOW ,RED);
+	sprintf(TEMP_BUF, "%.2f", temperature);
+	ST7735_WriteString(35, 35, TEMP_BUF, Font_16x26, GREEN, RED);
 }
 void writeTempLowWarn(double temperatures){
 
