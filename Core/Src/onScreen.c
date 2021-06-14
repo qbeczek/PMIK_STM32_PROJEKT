@@ -36,3 +36,11 @@ void errMenu(int errTemp, int errPres){
     ST7735_WriteString(65, 56, ERR_PRES_BUF, Font_16x26, RED, BLACK);
 	ST7735_WriteString(0, 80, "Sprawdz czujnik oraz  zresetuj urzadzenie", Font_7x10, YELLOW,BLACK);
 }
+
+
+void writeTempHighWarn(double temperature){
+
+}
+void writeTempLowWarn(double temperatures){
+
+}

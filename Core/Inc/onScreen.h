@@ -15,5 +15,7 @@ void writePress(double pressure);
 void writeMenu(void);
 void errMenu(int errTemp, int errPres);
 
+void writeTempHighWarn(double temperature);
+void writeTempLowWarn(double temperatures);
 
 #endif /* INC_ONSCREEN_H_ */

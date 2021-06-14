@@ -1,6 +1,6 @@
-bmp280_read.c:18:8:BMP280_init	16	static
-bmp280_read.c:75:5:BMP280_TempRead	40	static
-bmp280_read.c:95:5:BMP280_PressRead	40	static
-bmp280_read.c:120:6:delay_ms	16	static
-bmp280_read.c:139:8:i2c_reg_write	32	static
-bmp280_read.c:160:8:i2c_reg_read	32	static
+bmp280_read.c:22:8:BMP280_init	16	static
+bmp280_read.c:74:8:BMP280_TempRead	40	static
+bmp280_read.c:97:8:BMP280_PressRead	40	static
+bmp280_read.c:122:6:delay_ms	16	static
+bmp280_read.c:141:8:i2c_reg_write	32	static
+bmp280_read.c:162:8:i2c_reg_read	32	static
