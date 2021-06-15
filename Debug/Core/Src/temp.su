@@ -1,5 +1,0 @@
-temp.c:21:8:BMP280_init	16	static
-temp.c:78:5:BMP280_read	80	static
-temp.c:114:6:delay_ms	16	static
-temp.c:133:8:i2c_reg_write	32	static
-temp.c:154:8:i2c_reg_read	32	static

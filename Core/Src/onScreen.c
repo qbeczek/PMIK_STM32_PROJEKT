@@ -5,7 +5,7 @@
  *      Author: KUBA
  */
 #include "onScreen.h"
-#include "usart.h"
+
 #define MAX_BUF_SIZE 10
 
 char TEMP_BUF[MAX_BUF_SIZE];
@@ -46,6 +46,9 @@ void writeTempHighWarn(double temperature){
 	sprintf(TEMP_BUF, "%.2f", temperature);
 	ST7735_WriteString(35, 35, TEMP_BUF, Font_16x26, GREEN, RED);
 }
-void writeTempLowWarn(double temperatures){
-
+void writeTempLowWarn(double temperature){
+	ST7735_WriteString(2, 5, "Za niska temperatura", Font_7x10, BLACK,RED);
+	ST7735_WriteString(5, 20, "Aktualna temperatura:", Font_7x10, YELLOW ,RED);
+	sprintf(TEMP_BUF, "%.2f", temperature);
+	ST7735_WriteString(35, 35, TEMP_BUF, Font_16x26, GREEN, RED);
 }

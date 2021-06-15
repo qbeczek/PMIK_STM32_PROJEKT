@@ -40,7 +40,7 @@ extern TIM_HandleTypeDef htim10;
 void MX_TIM10_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+void sendMessage(void);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

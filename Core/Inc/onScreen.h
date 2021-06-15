@@ -10,12 +10,13 @@
 
 #include "ST7735.h"
 #include <stdio.h>
+
 void writeTemp(double temperature);
 void writePress(double pressure);
 void writeMenu(void);
 void errMenu(int errTemp, int errPres);
 
 void writeTempHighWarn(double temperature);
-void writeTempLowWarn(double temperatures);
+void writeTempLowWarn(double temperature);
 
 #endif /* INC_ONSCREEN_H_ */

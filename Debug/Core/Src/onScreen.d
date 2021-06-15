@@ -30,10 +30,7 @@ Core/Src/onScreen.o: ../Core/Src/onScreen.c ../Core/Inc/onScreen.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
- ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- ../Core/Inc/usart.h ../Core/Inc/main.h ../Core/Inc/GFX_FUNCTIONS.h \
- ../Core/Inc/bmp280.h ../Core/Inc/bmp280_read.h ../Core/Inc/onScreen.h \
- ../Core/Inc/i2c.h ../Core/Inc/bmp280_defs.h
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 ../Core/Inc/onScreen.h:
 
@@ -102,19 +99,3 @@ Core/Src/onScreen.o: ../Core/Src/onScreen.c ../Core/Inc/onScreen.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-
-../Core/Inc/usart.h:
-
-../Core/Inc/main.h:
-
-../Core/Inc/GFX_FUNCTIONS.h:
-
-../Core/Inc/bmp280.h:
-
-../Core/Inc/bmp280_read.h:
-
-../Core/Inc/onScreen.h:
-
-../Core/Inc/i2c.h:
-
-../Core/Inc/bmp280_defs.h:

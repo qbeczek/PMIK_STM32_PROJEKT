@@ -143,8 +143,6 @@ int main(void) {
 				writeMenu();
 				writeTemp(temp);
 				writePress(pres);
-			//	printf("Temperatura %f\r\n", temp);
-
 			}
 		} else {
 			if (refreshScreen4 == 0) {
@@ -207,7 +205,21 @@ void SystemClock_Config(void) {
 }
 
 /* USER CODE BEGIN 4 */
+/*!
+ * @name functions to return global variables temp
+ *
+ */
+double returnTemp(void){
+	return temp;
+}
 
+/*!
+ * @name function to return global variables pres
+ *
+ */
+double returnPres(void){
+	return pres;
+}
 /* USER CODE END 4 */
 
 /**

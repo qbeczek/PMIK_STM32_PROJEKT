@@ -37,8 +37,6 @@ extern "C" {
 #include "bmp280.h"
 #include "onScreen.h"
 #include <stdio.h>
-
-
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -60,7 +58,8 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+double returnTemp(void);
+double returnPres(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

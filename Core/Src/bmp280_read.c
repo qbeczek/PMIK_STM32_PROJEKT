@@ -10,7 +10,6 @@
 
 #include <bmp280_read.h>
 
-
 struct bmp280_dev bmp;
 
 /*
@@ -19,50 +18,46 @@ struct bmp280_dev bmp;
  */
 int8_t BMP280_init(void) {
 	int8_t rslt;
-    struct bmp280_config conf;
+	struct bmp280_config conf;
 
-    /* Map the delay function pointer with the function responsible for implementing the delay */
-    bmp.delay_ms = delay_ms;
+	/* Map the delay function pointer with the function responsible for implementing the delay */
+	bmp.delay_ms = delay_ms;
 
-    /* Assign device I2C address based on the status of SDO pin (GND for PRIMARY(0x76) & VDD for SECONDARY(0x77)) */
-    bmp.dev_id = (BMP280_I2C_ADDR_PRIM<<1);
+	/* Assign device I2C address based on the status of SDO pin (GND for PRIMARY(0x76) & VDD for SECONDARY(0x77)) */
+	bmp.dev_id = (BMP280_I2C_ADDR_PRIM << 1);
 
-    /* Select the interface mode as I2C */
-    bmp.intf = BMP280_I2C_INTF;
+	/* Select the interface mode as I2C */
+	bmp.intf = BMP280_I2C_INTF;
 
-    /* Map the I2C read & write function pointer with the functions responsible for I2C bus transfer */
-    bmp.read = i2c_reg_read;
-    bmp.write = i2c_reg_write;
+	/* Map the I2C read & write function pointer with the functions responsible for I2C bus transfer */
+	bmp.read = i2c_reg_read;
+	bmp.write = i2c_reg_write;
 
-    rslt = bmp280_init(&bmp);
+	rslt = bmp280_init(&bmp);
 
+	/* Always read the current settings before writing, especially when
+	 * all the configuration is not modified
+	 */
+	rslt = bmp280_get_config(&conf, &bmp);
 
-    /* Always read the current settings before writing, especially when
-     * all the configuration is not modified
-     */
-    rslt = bmp280_get_config(&conf, &bmp);
+	/* configuring the temperature oversampling, filter coefficient and output data rate */
+	/* Overwrite the desired settings */
+	conf.filter = BMP280_FILTER_COEFF_2;
 
+	/* Pressure oversampling set at 4x */
+	conf.os_pres = BMP280_OS_4X;
 
-    /* configuring the temperature oversampling, filter coefficient and output data rate */
-    /* Overwrite the desired settings */
-    conf.filter = BMP280_FILTER_COEFF_2;
+	/* Temperature oversampling set at 4x */
+	conf.os_temp = BMP280_OS_4X;
 
-    /* Pressure oversampling set at 4x */
-    conf.os_pres = BMP280_OS_4X;
+	/* Setting the output data rate as 1HZ(1000ms) */
+	conf.odr = BMP280_ODR_1000_MS;
+	rslt = bmp280_set_config(&conf, &bmp);
 
-    /* Temperature oversampling set at 4x */
-    conf.os_temp = BMP280_OS_4X;
+	/* Always set the power mode after setting the configuration */
+	rslt = bmp280_set_power_mode(BMP280_NORMAL_MODE, &bmp);
 
-    /* Setting the output data rate as 1HZ(1000ms) */
-    conf.odr = BMP280_ODR_1000_MS;
-    rslt = bmp280_set_config(&conf, &bmp);
-
-
-    /* Always set the power mode after setting the configuration */
-    rslt = bmp280_set_power_mode(BMP280_NORMAL_MODE, &bmp);
-
-
-    return rslt;
+	return rslt;
 
 }
 /*
@@ -70,22 +65,23 @@ int8_t BMP280_init(void) {
  * Zwracana wartość rslt to kod błędu przy złym odczycie
  */
 int8_t BMP280_TempRead(double *temperature) {
-	 int8_t errGet = 0;
-	 int8_t errComp = 0;
-     struct bmp280_uncomp_data ucomp_data;
-     double temp;
-	 /* Pobranie danych z czujnika */
-     if(errGet = bmp280_get_uncomp_data(&ucomp_data, &bmp) != BMP280_OK) {
-    	 return errGet;
-     }
+	int8_t errGet = 0;
+	int8_t errComp = 0;
+	struct bmp280_uncomp_data ucomp_data;
+	double temp;
+	/* Pobranie danych z czujnika */
+	if (errGet = bmp280_get_uncomp_data(&ucomp_data, &bmp) != BMP280_OK) {
+		return errGet;
+	}
 
-     /* Konwersja na liczby zmiennoprzecinkowe */
-      if(errComp = bmp280_get_comp_temp_double(&temp, ucomp_data.uncomp_temp, &bmp) != BMP280_OK){
-    	  return errComp;
-      }
-     /*przypisanie wartości temperatury do zmiennej globalnej*/
-     *temperature = temp;
-     return errComp;
+	/* Konwersja na liczby zmiennoprzecinkowe */
+	if (errComp = bmp280_get_comp_temp_double(&temp, ucomp_data.uncomp_temp,
+			&bmp) != BMP280_OK) {
+		return errComp;
+	}
+	/*przypisanie wartości temperatury do zmiennej globalnej*/
+	*temperature = temp;
+	return errComp;
 }
 
 /*
@@ -93,21 +89,25 @@ int8_t BMP280_TempRead(double *temperature) {
  * Zwracana wartość rslt to kod błędu przy złym odczycie
  */
 int8_t BMP280_PressRead(double *pressure) {
-	 int8_t rslt;
-     struct bmp280_uncomp_data ucomp_data;
+	int8_t errGet = 0;
+	int8_t errComp = 0;
+	struct bmp280_uncomp_data ucomp_data;
 
-     double pres;
+	double pres;
 
-	 /* Pobranie danych z czujnika */
-     rslt = bmp280_get_uncomp_data(&ucomp_data, &bmp);
+	/* Pobranie danych z czujnika */
+	if (errGet = bmp280_get_uncomp_data(&ucomp_data, &bmp) != BMP280_OK) {
+		return errGet;
+	}
+	/* Konwersja na liczby zmiennoprzecinkowe */
+	if (errComp = bmp280_get_comp_pres_double(&pres, ucomp_data.uncomp_press,
+			&bmp) != BMP280_OK) {
+		return errComp;
+	}
+	/*przypisanie wartości ciśnienia do zmiennej globalnej*/
+	*pressure = pres;
 
-     /* Konwersja na liczby zmiennoprzecinkowe */
-     rslt = bmp280_get_comp_pres_double(&pres, ucomp_data.uncomp_press, &bmp);
-
-     /*przypisanie wartości ciśnienia do zmiennej globalnej*/
-     *pressure = pres;
-
-     return rslt;
+	return errComp;
 }
 /*!
  *  @brief Function that creates a mandatory delay required in some of the APIs such as "bmg250_soft_reset",
@@ -117,9 +117,8 @@ int8_t BMP280_PressRead(double *pressure) {
  *  @return void.
  *
  */
-void delay_ms(uint32_t period_ms)
-{
-    /* Implement the delay routine according to the target machine */
+void delay_ms(uint32_t period_ms) {
+	/* Implement the delay routine according to the target machine */
 	HAL_Delay(period_ms);
 }
 
@@ -136,12 +135,12 @@ void delay_ms(uint32_t period_ms)
  *  @retval >0 -> Failure Info
  *
  */
-int8_t i2c_reg_write(uint8_t i2c_addr, uint8_t reg_addr, uint8_t *reg_data, uint16_t length)
-{
+int8_t i2c_reg_write(uint8_t i2c_addr, uint8_t reg_addr, uint8_t *reg_data,
+		uint16_t length) {
 
-    /* Implement the I2C write routine according to the target machine. */
+	/* Implement the I2C write routine according to the target machine. */
 	HAL_I2C_Mem_Write(&hi2c1, i2c_addr, reg_addr, 1, reg_data, length, 100);
-    return 0;
+	return 0;
 }
 
 /*!
@@ -157,12 +156,12 @@ int8_t i2c_reg_write(uint8_t i2c_addr, uint8_t reg_addr, uint8_t *reg_data, uint
  *  @retval >0 -> Failure Info
  *
  */
-int8_t i2c_reg_read(uint8_t i2c_addr, uint8_t reg_addr, uint8_t *reg_data, uint16_t length)
-{
+int8_t i2c_reg_read(uint8_t i2c_addr, uint8_t reg_addr, uint8_t *reg_data,
+		uint16_t length) {
 
-    /* Implement the I2C read routine according to the target machine. */
+	/* Implement the I2C read routine according to the target machine. */
 	HAL_I2C_Mem_Read(&hi2c1, i2c_addr, reg_addr, 1, reg_data, length, 100);
-    return 0;
+	return 0;
 }
 
 /*!

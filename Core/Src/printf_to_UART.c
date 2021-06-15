@@ -6,8 +6,9 @@
  */
 #include "usart.h"
 
-int __io_putchar(int ch)
-{
-    HAL_UART_Transmit(&huart2, (uint8_t*)&ch, 1, HAL_MAX_DELAY);
-    return 1;
+int __io_putchar(int ch) {
+	uint8_t c[1];
+	c[0] = ch & 0x00FF;
+	HAL_UART_Transmit(&huart2, &*c, 1, 10);
+	return ch;
 }
