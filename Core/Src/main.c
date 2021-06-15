@@ -21,16 +21,18 @@
 #include "main.h"
 #include "i2c.h"
 #include "spi.h"
+#include "tim.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "macros.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-#define TEMP_MAX 30
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -45,14 +47,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-int8_t errTemp = 0;
-int8_t errPres = 0;
-double temp = 0.0;
-double pres = 0.0;
-int refreshScreen1 = 0;
-int refreshScreen2 = 0;
-int refreshScreen3 = 0;
-int refreshScreen4 = 0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -95,8 +90,13 @@ int main(void) {
 	MX_GPIO_Init();
 	MX_SPI2_Init();
 	MX_I2C1_Init();
+	MX_USART2_UART_Init();
+	MX_TIM10_Init();
 	/* USER CODE BEGIN 2 */
+	/* Initialize TIMER10 */
+	HAL_TIM_Base_Start_IT(&htim10);
 	/*Initialize BMP280 sensor*/
+
 	BMP280_init();
 	/*Initialize and test TFT display ST7735*/
 	ST7735_Init(0);
@@ -108,10 +108,12 @@ int main(void) {
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 	while (1) {
+
 		if ((errTemp = BMP280_TempRead(&temp)) == BMP280_OK && (errPres =
 				BMP280_PressRead(&pres)) == BMP280_OK) {
+
 			//jeśli funkcje nie zwróciły błędów zostanie wykonana ta część funkcji- BMP280_OK = 0;
-			if (temp > 30) {
+			if (temp > TEMP_MAX) {
 				if (refreshScreen1 == 0) {
 					refreshScreen1 = 1;
 					refreshScreen2 = 0;
@@ -120,7 +122,7 @@ int main(void) {
 					fillScreen(RED);
 				}
 				writeTempHighWarn(temp);
-			} else if (temp < 15) {
+			} else if (temp < TEMP_MIN) {
 				if (refreshScreen2 == 0) {
 					refreshScreen1 = 0;
 					refreshScreen2 = 1;
@@ -129,7 +131,7 @@ int main(void) {
 					fillScreen(RED);
 				}
 				writeTempLowWarn(temp);
-			} else if (temp > 15 && temp < 30) {
+			} else if (temp > TEMP_MIN && temp < TEMP_MAX) {
 				if (refreshScreen3 == 0) {
 					refreshScreen1 = 0;
 					refreshScreen2 = 0;
@@ -141,6 +143,8 @@ int main(void) {
 				writeMenu();
 				writeTemp(temp);
 				writePress(pres);
+			//	printf("Temperatura %f\r\n", temp);
+
 			}
 		} else {
 			if (refreshScreen4 == 0) {

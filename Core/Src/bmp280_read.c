@@ -5,9 +5,7 @@
  *      Author: KUBA
  */
 /*!
- *  @brief Example shows basic setup of sensor which includes following
- *      Initialization of the interface.
- *      performing the sensor initialization.
+ *  @brief
  */
 
 #include <bmp280_read.h>

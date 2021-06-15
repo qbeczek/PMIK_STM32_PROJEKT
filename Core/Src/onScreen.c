@@ -5,6 +5,7 @@
  *      Author: KUBA
  */
 #include "onScreen.h"
+#include "usart.h"
 #define MAX_BUF_SIZE 10
 
 char TEMP_BUF[MAX_BUF_SIZE];
