@@ -6,8 +6,14 @@
 **/
 #include "onScreen.h"
 
+/*
+/*! @name    Maksymalny rozmiar bufora
+*/
 #define MAX_BUF_SIZE 10
 
+/*
+/*! @name    Bufory używane do konwersji danych
+*/
 char TEMP_BUF[MAX_BUF_SIZE];
 char PRES_BUF[MAX_BUF_SIZE];
 char ERR_TEMP_BUF[MAX_BUF_SIZE];
