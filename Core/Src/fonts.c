@@ -1,3 +1,10 @@
+/**
+  ******************************************************************************
+  * @file    fonts.c
+  * @brief   Plik zawiera definicje fontów wykorzystywanych w wyświetlaczu ST7735
+  ******************************************************************************
+  */
+
 /* vim: set ai et ts=4 sw=4: */
 #include "fonts.h"
 
