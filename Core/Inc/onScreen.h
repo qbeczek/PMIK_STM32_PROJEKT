@@ -1,7 +1,9 @@
-/*
- * onScreen.h
- *
- *  Created on: 11 cze 2021
+/**
+ ******************************************************************************
+ * @file    onScreen.h
+ * @brief   Plik zawiera prototypy funkcji pliku onScreen.c
+ ******************************************************************************
+ * *  Created on: Jun 8, 2021
  *      Author: KUBA
  */
 

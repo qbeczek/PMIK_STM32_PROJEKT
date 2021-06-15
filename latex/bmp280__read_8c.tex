@@ -1,0 +1,181 @@
+\hypertarget{bmp280__read_8c}{}\doxysection{Dokumentacja pliku D\+:/\+Studia/\+S5/\+PMIK/workspace\+\_\+\+IDE/12\+\_\+\+ST7735/\+Core/\+Src/bmp280\+\_\+read.c}
+\label{bmp280__read_8c}\index{D:/Studia/S5/PMIK/workspace\_IDE/12\_ST7735/Core/Src/bmp280\_read.c@{D:/Studia/S5/PMIK/workspace\_IDE/12\_ST7735/Core/Src/bmp280\_read.c}}
+
+
+Plik zawiera konfiguracje czujnika BMP280 oraz funkcje, które odczytują temperaturę i ciśnienie.  
+
+
+{\ttfamily \#include $<$bmp280\+\_\+read.\+h$>$}\newline
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+int8\+\_\+t \mbox{\hyperlink{bmp280__read_8c_a36d1c396989ac58d3443c39c06da806f}{BMP280\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Funkcja inicjalizująca czujnik BMP280. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{bmp280__read_8c_af4af349f4233ac6adb7612204fca83b6}{BMP280\+\_\+\+Temp\+Read}} (double $\ast$temperature)
+\begin{DoxyCompactList}\small\item\em Funkcja odczytuje temperature z czujnika BMP280 wykorzystując funkcje z bibliotek \mbox{\hyperlink{bmp280_8c}{bmp280.\+c}}. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{bmp280__read_8c_a6593916ffdc0d3f2a64eb4da138c0545}{BMP280\+\_\+\+Press\+Read}} (double $\ast$pressure)
+\begin{DoxyCompactList}\small\item\em Funkcja odczytuje ciśnienie z czujnika BMP280 wykorzystując funkcje z bibliotek \mbox{\hyperlink{bmp280_8c}{bmp280.\+c}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bmp280__read_8c_add22c2ae1df6fc07510d91ef5dd6cf51}{delay\+\_\+ms}} (uint32\+\_\+t period\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Function that creates a mandatory delay required in some of the APIs such as \char`\"{}bmg250\+\_\+soft\+\_\+reset\char`\"{}, \char`\"{}bmg250\+\_\+set\+\_\+foc\char`\"{}, \char`\"{}bmg250\+\_\+perform\+\_\+self\+\_\+test\char`\"{} and so on. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{bmp280__read_8c_a6edf190f34f4a642def68cfafd8d3a7f}{i2c\+\_\+reg\+\_\+write}} (uint8\+\_\+t i2c\+\_\+addr, uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t $\ast$reg\+\_\+data, uint16\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Function for writing the sensor\textquotesingle{}s registers through I2C bus. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{bmp280__read_8c_a9ea4f460cdfc82cd4c695f0bfd43bdc6}{i2c\+\_\+reg\+\_\+read}} (uint8\+\_\+t i2c\+\_\+addr, uint8\+\_\+t reg\+\_\+addr, uint8\+\_\+t $\ast$reg\+\_\+data, uint16\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Function for reading the sensor\textquotesingle{}s registers through I2C bus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{bmp280__read_8c_afa454d49bc1292bb653871a21549be88}\label{bmp280__read_8c_afa454d49bc1292bb653871a21549be88}} 
+struct \mbox{\hyperlink{structbmp280__dev}{bmp280\+\_\+dev}} {\bfseries bmp}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Plik zawiera konfiguracje czujnika BMP280 oraz funkcje, które odczytują temperaturę i ciśnienie. 
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{bmp280__read_8c_a36d1c396989ac58d3443c39c06da806f}\label{bmp280__read_8c_a36d1c396989ac58d3443c39c06da806f}} 
+\index{bmp280\_read.c@{bmp280\_read.c}!BMP280\_init@{BMP280\_init}}
+\index{BMP280\_init@{BMP280\_init}!bmp280\_read.c@{bmp280\_read.c}}
+\doxysubsubsection{\texorpdfstring{BMP280\_init()}{BMP280\_init()}}
+{\footnotesize\ttfamily int8\+\_\+t BMP280\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Funkcja inicjalizująca czujnik BMP280. 
+
+\begin{DoxyReturn}{Zwraca}
+zwracana wartość to ewentualne kody błędów 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em zero} & oznacza sukces, inne wartości to kody błędów. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{bmp280__read_8c_a6593916ffdc0d3f2a64eb4da138c0545}\label{bmp280__read_8c_a6593916ffdc0d3f2a64eb4da138c0545}} 
+\index{bmp280\_read.c@{bmp280\_read.c}!BMP280\_PressRead@{BMP280\_PressRead}}
+\index{BMP280\_PressRead@{BMP280\_PressRead}!bmp280\_read.c@{bmp280\_read.c}}
+\doxysubsubsection{\texorpdfstring{BMP280\_PressRead()}{BMP280\_PressRead()}}
+{\footnotesize\ttfamily int8\+\_\+t BMP280\+\_\+\+Press\+Read (\begin{DoxyParamCaption}\item[{double $\ast$}]{pressure }\end{DoxyParamCaption})}
+
+
+
+Funkcja odczytuje ciśnienie z czujnika BMP280 wykorzystując funkcje z bibliotek \mbox{\hyperlink{bmp280_8c}{bmp280.\+c}}. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ out}}  & {\em pressure} & \+: wskaźnik na zmienną globalną pres -\/ globalne przypisanie wartości ciśnienia\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+zwracana wartość to ewentualne kody błędów 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em zero} & oznacza sukces, inne wartości to kody błędów. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{bmp280__read_8c_af4af349f4233ac6adb7612204fca83b6}\label{bmp280__read_8c_af4af349f4233ac6adb7612204fca83b6}} 
+\index{bmp280\_read.c@{bmp280\_read.c}!BMP280\_TempRead@{BMP280\_TempRead}}
+\index{BMP280\_TempRead@{BMP280\_TempRead}!bmp280\_read.c@{bmp280\_read.c}}
+\doxysubsubsection{\texorpdfstring{BMP280\_TempRead()}{BMP280\_TempRead()}}
+{\footnotesize\ttfamily int8\+\_\+t BMP280\+\_\+\+Temp\+Read (\begin{DoxyParamCaption}\item[{double $\ast$}]{temperature }\end{DoxyParamCaption})}
+
+
+
+Funkcja odczytuje temperature z czujnika BMP280 wykorzystując funkcje z bibliotek \mbox{\hyperlink{bmp280_8c}{bmp280.\+c}}. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ out}}  & {\em temperature} & \+: wskaźnik na zmienną globalną temp -\/ globalne przypisanie wartości temperatury\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+zwracana wartość to ewentualne kody błędów 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em zero} & oznacza sukces, inne wartości to kody błędów. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{bmp280__read_8c_add22c2ae1df6fc07510d91ef5dd6cf51}\label{bmp280__read_8c_add22c2ae1df6fc07510d91ef5dd6cf51}} 
+\index{bmp280\_read.c@{bmp280\_read.c}!delay\_ms@{delay\_ms}}
+\index{delay\_ms@{delay\_ms}!bmp280\_read.c@{bmp280\_read.c}}
+\doxysubsubsection{\texorpdfstring{delay\_ms()}{delay\_ms()}}
+{\footnotesize\ttfamily void delay\+\_\+ms (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{period\+\_\+ms }\end{DoxyParamCaption})}
+
+
+
+Function that creates a mandatory delay required in some of the APIs such as \char`\"{}bmg250\+\_\+soft\+\_\+reset\char`\"{}, \char`\"{}bmg250\+\_\+set\+\_\+foc\char`\"{}, \char`\"{}bmg250\+\_\+perform\+\_\+self\+\_\+test\char`\"{} and so on. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em period\+\_\+ms} & \+: the required wait time in milliseconds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{bmp280__read_8c_a9ea4f460cdfc82cd4c695f0bfd43bdc6}\label{bmp280__read_8c_a9ea4f460cdfc82cd4c695f0bfd43bdc6}} 
+\index{bmp280\_read.c@{bmp280\_read.c}!i2c\_reg\_read@{i2c\_reg\_read}}
+\index{i2c\_reg\_read@{i2c\_reg\_read}!bmp280\_read.c@{bmp280\_read.c}}
+\doxysubsubsection{\texorpdfstring{i2c\_reg\_read()}{i2c\_reg\_read()}}
+{\footnotesize\ttfamily int8\+\_\+t i2c\+\_\+reg\+\_\+read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{i2c\+\_\+addr,  }\item[{uint8\+\_\+t}]{reg\+\_\+addr,  }\item[{uint8\+\_\+t $\ast$}]{reg\+\_\+data,  }\item[{uint16\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Function for reading the sensor\textquotesingle{}s registers through I2C bus. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em i2c\+\_\+addr} & \+: Sensor I2C address. \\
+\hline
+\mbox{\texttt{ in}}  & {\em reg\+\_\+addr} & \+: Register address. \\
+\hline
+\mbox{\texttt{ out}}  & {\em reg\+\_\+data} & \+: Pointer to the data buffer to store the read data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & \+: No of bytes to read.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Status of execution 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em 0} & -\/$>$ Success \\
+\hline
+{\em $>$0} & -\/$>$ Failure Info \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{bmp280__read_8c_a6edf190f34f4a642def68cfafd8d3a7f}\label{bmp280__read_8c_a6edf190f34f4a642def68cfafd8d3a7f}} 
+\index{bmp280\_read.c@{bmp280\_read.c}!i2c\_reg\_write@{i2c\_reg\_write}}
+\index{i2c\_reg\_write@{i2c\_reg\_write}!bmp280\_read.c@{bmp280\_read.c}}
+\doxysubsubsection{\texorpdfstring{i2c\_reg\_write()}{i2c\_reg\_write()}}
+{\footnotesize\ttfamily int8\+\_\+t i2c\+\_\+reg\+\_\+write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{i2c\+\_\+addr,  }\item[{uint8\+\_\+t}]{reg\+\_\+addr,  }\item[{uint8\+\_\+t $\ast$}]{reg\+\_\+data,  }\item[{uint16\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Function for writing the sensor\textquotesingle{}s registers through I2C bus. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em i2c\+\_\+addr} & \+: sensor I2C address. \\
+\hline
+\mbox{\texttt{ in}}  & {\em reg\+\_\+addr} & \+: Register address. \\
+\hline
+\mbox{\texttt{ in}}  & {\em reg\+\_\+data} & \+: Pointer to the data buffer whose value is to be written. \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & \+: No of bytes to write.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Status of execution 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em 0} & -\/$>$ Success \\
+\hline
+{\em $>$0} & -\/$>$ Failure Info \\
+\hline
+\end{DoxyRetVals}

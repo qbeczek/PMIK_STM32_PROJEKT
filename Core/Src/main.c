@@ -2,7 +2,7 @@
 /**
  ******************************************************************************
  * @file           : main.c
- * @brief          : Main program body
+ * @brief          : Główny plik programu. Udało się zrealizować odczytanie temperatury i ciśnienia. Po odczytaniu danych z czujnika wartości są wyświetlane na wyświetlaczu TFT oraz wysyłane co 1 sekundę - przerwanie timera - do komputera interfejsem UART. W przypadku przekroczenia zakresu temperatur jest wystawiany odpowiedni komunikat.
  ******************************************************************************
  * @attention
  *

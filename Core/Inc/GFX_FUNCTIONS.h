@@ -1,9 +1,12 @@
-/*
- * GFX_FUNCTIONS.h
- *
- *  Created on: 30-Oct-2020
- *      Author: meh
+/**
+ ******************************************************************************
+ * @file    GFX_FUNCTIONS.h
+ * @brief   Plik zawiera prototypy funkcji pliku GFX_FUNCTIONS.c
+ ******************************************************************************
+ * *  Created on: May 4, 2021
+ *      Author: KUBA
  */
+
 
 #ifndef INC_GFX_FUNCTIONS_H_
 #define INC_GFX_FUNCTIONS_H_

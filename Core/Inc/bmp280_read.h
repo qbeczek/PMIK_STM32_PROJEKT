@@ -1,9 +1,9 @@
-/*
- * temp.h
- *
- *  Created on: Jun 8, 2021
- *      Author: KUBA
- */
+/**
+  ******************************************************************************
+  * @file    bmp280_read.h
+  * @brief   Plik zawiera prototypy funkcji pliku bmp280_read.c
+  ******************************************************************************
+  */
 
 #ifndef INC_BMP280_READ_H_
 #define INC_BMP280_READ_H_
@@ -13,11 +13,11 @@
 #include "onScreen.h"
 #include "i2c.h"
 
-
-
 void delay_ms(uint32_t period_ms);
-int8_t i2c_reg_write(uint8_t i2c_addr, uint8_t reg_addr, uint8_t *reg_data, uint16_t length);
-int8_t i2c_reg_read(uint8_t i2c_addr, uint8_t reg_addr, uint8_t *reg_data, uint16_t length);
+int8_t i2c_reg_write(uint8_t i2c_addr, uint8_t reg_addr, uint8_t *reg_data,
+		uint16_t length);
+int8_t i2c_reg_read(uint8_t i2c_addr, uint8_t reg_addr, uint8_t *reg_data,
+		uint16_t length);
 int8_t BMP280_init(void);
 int8_t BMP280_TempRead(double *temperature);
 int8_t BMP280_PressRead(double *pressure);

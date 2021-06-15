@@ -110,6 +110,11 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef *uartHandle) {
 }
 
 /* USER CODE BEGIN 1 */
+
+/*!
+ * @brief Funkcja wysyłająca wiadomości na UART - wywoływana w przerwaniu TIM
+ * @return void
+ */
 void sendMessage(void) {
 	double temp = returnTemp();
 	double pres = returnPres();

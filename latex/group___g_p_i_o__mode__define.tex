@@ -1,0 +1,134 @@
+\hypertarget{group___g_p_i_o__mode__define}{}\doxysection{GPIO mode define}
+\label{group___g_p_i_o__mode__define}\index{GPIO mode define@{GPIO mode define}}
+
+
+GPIO Configuration Mode Elements values convention\+: 0x\+X0yz00\+YZ.  
+
+
+\doxysubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o__mode__define_gaf40bec3146810028a84b628d37d3b391}{GPIO\+\_\+\+MODE\+\_\+\+INPUT}}~\mbox{\hyperlink{group___g_p_i_o___private___constants_ga89aaf2dc63dbfb7a60898372d496a56c}{MODE\+\_\+\+INPUT}}
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o__mode__define_ga1013838a64cec2f8c88f079c449d1982}{GPIO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+PP}}~(\mbox{\hyperlink{group___g_p_i_o___private___constants_gae84412164dbbf5939197b4762a1e667b}{MODE\+\_\+\+PP}} $\vert$ \mbox{\hyperlink{group___g_p_i_o___private___constants_ga3b23ec3cf56d4fc73dd1185b7f2792d6}{MODE\+\_\+\+OUTPUT}})
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o__mode__define_ga2f91757829f6e9505ec386b840941929}{GPIO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+OD}}~(\mbox{\hyperlink{group___g_p_i_o___private___constants_ga62f387670dad30bb7478b496c8b2456f}{MODE\+\_\+\+OD}} $\vert$ \mbox{\hyperlink{group___g_p_i_o___private___constants_ga3b23ec3cf56d4fc73dd1185b7f2792d6}{MODE\+\_\+\+OUTPUT}})
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o__mode__define_ga526c72c5264316fc05c775b6cad4aa6a}{GPIO\+\_\+\+MODE\+\_\+\+AF\+\_\+\+PP}}~(\mbox{\hyperlink{group___g_p_i_o___private___constants_gae84412164dbbf5939197b4762a1e667b}{MODE\+\_\+\+PP}} $\vert$ \mbox{\hyperlink{group___g_p_i_o___private___constants_ga60ce9a309c9629a88569a919d84313c1}{MODE\+\_\+\+AF}})
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o__mode__define_ga282b9fd37c8ef31daba314ffae6bf023}{GPIO\+\_\+\+MODE\+\_\+\+AF\+\_\+\+OD}}~(\mbox{\hyperlink{group___g_p_i_o___private___constants_ga62f387670dad30bb7478b496c8b2456f}{MODE\+\_\+\+OD}} $\vert$ \mbox{\hyperlink{group___g_p_i_o___private___constants_ga60ce9a309c9629a88569a919d84313c1}{MODE\+\_\+\+AF}})
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o__mode__define_ga7a04f9ab65ad572ad20791a35009220c}{GPIO\+\_\+\+MODE\+\_\+\+ANALOG}}~\mbox{\hyperlink{group___g_p_i_o___private___constants_ga6184043271806f6f261da2471fbb22be}{MODE\+\_\+\+ANALOG}}
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o__mode__define_ga088659562e68426d9a72821ea4fd8d50}{GPIO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING}}~(EXTI\+\_\+\+MODE $\vert$ GPIO\+\_\+\+MODE\+\_\+\+IT $\vert$ RISING\+\_\+\+EDGE)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o__mode__define_gaa166210a6da3ac7e8d7504702520e522}{GPIO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+FALLING}}~(EXTI\+\_\+\+MODE $\vert$ GPIO\+\_\+\+MODE\+\_\+\+IT               $\vert$ FALLING\+\_\+\+EDGE)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o__mode__define_ga0678e61090ed61e91a6496f22ddfb3d1}{GPIO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING\+\_\+\+FALLING}}~(EXTI\+\_\+\+MODE $\vert$ GPIO\+\_\+\+MODE\+\_\+\+IT $\vert$ RISING\+\_\+\+EDGE $\vert$ FALLING\+\_\+\+EDGE)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o__mode__define_ga97d78b82ea178ff7a4c35aa60b4e9338}{GPIO\+\_\+\+MODE\+\_\+\+EVT\+\_\+\+RISING}}~(EXTI\+\_\+\+MODE $\vert$ GPIO\+\_\+\+MODE\+\_\+\+EVT $\vert$ RISING\+\_\+\+EDGE)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o__mode__define_gadbfa532b3566783ac6c0e07c2e0ffe5e}{GPIO\+\_\+\+MODE\+\_\+\+EVT\+\_\+\+FALLING}}~(EXTI\+\_\+\+MODE $\vert$ GPIO\+\_\+\+MODE\+\_\+\+EVT               $\vert$ FALLING\+\_\+\+EDGE)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o__mode__define_ga1b760771297ed2fc55a6b13071188491}{GPIO\+\_\+\+MODE\+\_\+\+EVT\+\_\+\+RISING\+\_\+\+FALLING}}~(EXTI\+\_\+\+MODE $\vert$ GPIO\+\_\+\+MODE\+\_\+\+EVT $\vert$ RISING\+\_\+\+EDGE $\vert$ FALLING\+\_\+\+EDGE)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+GPIO Configuration Mode Elements values convention\+: 0x\+X0yz00\+YZ. 
+
+
+\begin{DoxyItemize}
+\item X \+: GPIO mode or EXTI Mode
+\item y \+: External IT or Event trigger detection
+\item z \+: IO configuration on External IT or Event
+\item Y \+: Output type (Push Pull or Open Drain)
+\item Z \+: IO Direction mode (Input, Output, Alternate or Analog) 
+\end{DoxyItemize}
+
+\doxysubsection{Dokumentacja definicji}
+\mbox{\Hypertarget{group___g_p_i_o__mode__define_ga282b9fd37c8ef31daba314ffae6bf023}\label{group___g_p_i_o__mode__define_ga282b9fd37c8ef31daba314ffae6bf023}} 
+\index{GPIO mode define@{GPIO mode define}!GPIO\_MODE\_AF\_OD@{GPIO\_MODE\_AF\_OD}}
+\index{GPIO\_MODE\_AF\_OD@{GPIO\_MODE\_AF\_OD}!GPIO mode define@{GPIO mode define}}
+\doxysubsubsection{\texorpdfstring{GPIO\_MODE\_AF\_OD}{GPIO\_MODE\_AF\_OD}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+MODE\+\_\+\+AF\+\_\+\+OD~(\mbox{\hyperlink{group___g_p_i_o___private___constants_ga62f387670dad30bb7478b496c8b2456f}{MODE\+\_\+\+OD}} $\vert$ \mbox{\hyperlink{group___g_p_i_o___private___constants_ga60ce9a309c9629a88569a919d84313c1}{MODE\+\_\+\+AF}})}
+
+Alternate Function Open Drain Mode ~\newline
+ \mbox{\Hypertarget{group___g_p_i_o__mode__define_ga526c72c5264316fc05c775b6cad4aa6a}\label{group___g_p_i_o__mode__define_ga526c72c5264316fc05c775b6cad4aa6a}} 
+\index{GPIO mode define@{GPIO mode define}!GPIO\_MODE\_AF\_PP@{GPIO\_MODE\_AF\_PP}}
+\index{GPIO\_MODE\_AF\_PP@{GPIO\_MODE\_AF\_PP}!GPIO mode define@{GPIO mode define}}
+\doxysubsubsection{\texorpdfstring{GPIO\_MODE\_AF\_PP}{GPIO\_MODE\_AF\_PP}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+MODE\+\_\+\+AF\+\_\+\+PP~(\mbox{\hyperlink{group___g_p_i_o___private___constants_gae84412164dbbf5939197b4762a1e667b}{MODE\+\_\+\+PP}} $\vert$ \mbox{\hyperlink{group___g_p_i_o___private___constants_ga60ce9a309c9629a88569a919d84313c1}{MODE\+\_\+\+AF}})}
+
+Alternate Function Push Pull Mode ~\newline
+ \mbox{\Hypertarget{group___g_p_i_o__mode__define_ga7a04f9ab65ad572ad20791a35009220c}\label{group___g_p_i_o__mode__define_ga7a04f9ab65ad572ad20791a35009220c}} 
+\index{GPIO mode define@{GPIO mode define}!GPIO\_MODE\_ANALOG@{GPIO\_MODE\_ANALOG}}
+\index{GPIO\_MODE\_ANALOG@{GPIO\_MODE\_ANALOG}!GPIO mode define@{GPIO mode define}}
+\doxysubsubsection{\texorpdfstring{GPIO\_MODE\_ANALOG}{GPIO\_MODE\_ANALOG}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+MODE\+\_\+\+ANALOG~\mbox{\hyperlink{group___g_p_i_o___private___constants_ga6184043271806f6f261da2471fbb22be}{MODE\+\_\+\+ANALOG}}}
+
+Analog Mode ~\newline
+ \mbox{\Hypertarget{group___g_p_i_o__mode__define_gadbfa532b3566783ac6c0e07c2e0ffe5e}\label{group___g_p_i_o__mode__define_gadbfa532b3566783ac6c0e07c2e0ffe5e}} 
+\index{GPIO mode define@{GPIO mode define}!GPIO\_MODE\_EVT\_FALLING@{GPIO\_MODE\_EVT\_FALLING}}
+\index{GPIO\_MODE\_EVT\_FALLING@{GPIO\_MODE\_EVT\_FALLING}!GPIO mode define@{GPIO mode define}}
+\doxysubsubsection{\texorpdfstring{GPIO\_MODE\_EVT\_FALLING}{GPIO\_MODE\_EVT\_FALLING}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+MODE\+\_\+\+EVT\+\_\+\+FALLING~(EXTI\+\_\+\+MODE $\vert$ GPIO\+\_\+\+MODE\+\_\+\+EVT               $\vert$ FALLING\+\_\+\+EDGE)}
+
+External Event Mode with Falling edge trigger detection ~\newline
+ \mbox{\Hypertarget{group___g_p_i_o__mode__define_ga97d78b82ea178ff7a4c35aa60b4e9338}\label{group___g_p_i_o__mode__define_ga97d78b82ea178ff7a4c35aa60b4e9338}} 
+\index{GPIO mode define@{GPIO mode define}!GPIO\_MODE\_EVT\_RISING@{GPIO\_MODE\_EVT\_RISING}}
+\index{GPIO\_MODE\_EVT\_RISING@{GPIO\_MODE\_EVT\_RISING}!GPIO mode define@{GPIO mode define}}
+\doxysubsubsection{\texorpdfstring{GPIO\_MODE\_EVT\_RISING}{GPIO\_MODE\_EVT\_RISING}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+MODE\+\_\+\+EVT\+\_\+\+RISING~(EXTI\+\_\+\+MODE $\vert$ GPIO\+\_\+\+MODE\+\_\+\+EVT $\vert$ RISING\+\_\+\+EDGE)}
+
+External Event Mode with Rising edge trigger detection ~\newline
+ \mbox{\Hypertarget{group___g_p_i_o__mode__define_ga1b760771297ed2fc55a6b13071188491}\label{group___g_p_i_o__mode__define_ga1b760771297ed2fc55a6b13071188491}} 
+\index{GPIO mode define@{GPIO mode define}!GPIO\_MODE\_EVT\_RISING\_FALLING@{GPIO\_MODE\_EVT\_RISING\_FALLING}}
+\index{GPIO\_MODE\_EVT\_RISING\_FALLING@{GPIO\_MODE\_EVT\_RISING\_FALLING}!GPIO mode define@{GPIO mode define}}
+\doxysubsubsection{\texorpdfstring{GPIO\_MODE\_EVT\_RISING\_FALLING}{GPIO\_MODE\_EVT\_RISING\_FALLING}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+MODE\+\_\+\+EVT\+\_\+\+RISING\+\_\+\+FALLING~(EXTI\+\_\+\+MODE $\vert$ GPIO\+\_\+\+MODE\+\_\+\+EVT $\vert$ RISING\+\_\+\+EDGE $\vert$ FALLING\+\_\+\+EDGE)}
+
+External Event Mode with Rising/\+Falling edge trigger detection ~\newline
+ \mbox{\Hypertarget{group___g_p_i_o__mode__define_gaf40bec3146810028a84b628d37d3b391}\label{group___g_p_i_o__mode__define_gaf40bec3146810028a84b628d37d3b391}} 
+\index{GPIO mode define@{GPIO mode define}!GPIO\_MODE\_INPUT@{GPIO\_MODE\_INPUT}}
+\index{GPIO\_MODE\_INPUT@{GPIO\_MODE\_INPUT}!GPIO mode define@{GPIO mode define}}
+\doxysubsubsection{\texorpdfstring{GPIO\_MODE\_INPUT}{GPIO\_MODE\_INPUT}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+MODE\+\_\+\+INPUT~\mbox{\hyperlink{group___g_p_i_o___private___constants_ga89aaf2dc63dbfb7a60898372d496a56c}{MODE\+\_\+\+INPUT}}}
+
+Input Floating Mode ~\newline
+ \mbox{\Hypertarget{group___g_p_i_o__mode__define_gaa166210a6da3ac7e8d7504702520e522}\label{group___g_p_i_o__mode__define_gaa166210a6da3ac7e8d7504702520e522}} 
+\index{GPIO mode define@{GPIO mode define}!GPIO\_MODE\_IT\_FALLING@{GPIO\_MODE\_IT\_FALLING}}
+\index{GPIO\_MODE\_IT\_FALLING@{GPIO\_MODE\_IT\_FALLING}!GPIO mode define@{GPIO mode define}}
+\doxysubsubsection{\texorpdfstring{GPIO\_MODE\_IT\_FALLING}{GPIO\_MODE\_IT\_FALLING}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+FALLING~(EXTI\+\_\+\+MODE $\vert$ GPIO\+\_\+\+MODE\+\_\+\+IT               $\vert$ FALLING\+\_\+\+EDGE)}
+
+External Interrupt Mode with Falling edge trigger detection ~\newline
+ \mbox{\Hypertarget{group___g_p_i_o__mode__define_ga088659562e68426d9a72821ea4fd8d50}\label{group___g_p_i_o__mode__define_ga088659562e68426d9a72821ea4fd8d50}} 
+\index{GPIO mode define@{GPIO mode define}!GPIO\_MODE\_IT\_RISING@{GPIO\_MODE\_IT\_RISING}}
+\index{GPIO\_MODE\_IT\_RISING@{GPIO\_MODE\_IT\_RISING}!GPIO mode define@{GPIO mode define}}
+\doxysubsubsection{\texorpdfstring{GPIO\_MODE\_IT\_RISING}{GPIO\_MODE\_IT\_RISING}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING~(EXTI\+\_\+\+MODE $\vert$ GPIO\+\_\+\+MODE\+\_\+\+IT $\vert$ RISING\+\_\+\+EDGE)}
+
+External Interrupt Mode with Rising edge trigger detection ~\newline
+ \mbox{\Hypertarget{group___g_p_i_o__mode__define_ga0678e61090ed61e91a6496f22ddfb3d1}\label{group___g_p_i_o__mode__define_ga0678e61090ed61e91a6496f22ddfb3d1}} 
+\index{GPIO mode define@{GPIO mode define}!GPIO\_MODE\_IT\_RISING\_FALLING@{GPIO\_MODE\_IT\_RISING\_FALLING}}
+\index{GPIO\_MODE\_IT\_RISING\_FALLING@{GPIO\_MODE\_IT\_RISING\_FALLING}!GPIO mode define@{GPIO mode define}}
+\doxysubsubsection{\texorpdfstring{GPIO\_MODE\_IT\_RISING\_FALLING}{GPIO\_MODE\_IT\_RISING\_FALLING}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+MODE\+\_\+\+IT\+\_\+\+RISING\+\_\+\+FALLING~(EXTI\+\_\+\+MODE $\vert$ GPIO\+\_\+\+MODE\+\_\+\+IT $\vert$ RISING\+\_\+\+EDGE $\vert$ FALLING\+\_\+\+EDGE)}
+
+External Interrupt Mode with Rising/\+Falling edge trigger detection ~\newline
+ \mbox{\Hypertarget{group___g_p_i_o__mode__define_ga2f91757829f6e9505ec386b840941929}\label{group___g_p_i_o__mode__define_ga2f91757829f6e9505ec386b840941929}} 
+\index{GPIO mode define@{GPIO mode define}!GPIO\_MODE\_OUTPUT\_OD@{GPIO\_MODE\_OUTPUT\_OD}}
+\index{GPIO\_MODE\_OUTPUT\_OD@{GPIO\_MODE\_OUTPUT\_OD}!GPIO mode define@{GPIO mode define}}
+\doxysubsubsection{\texorpdfstring{GPIO\_MODE\_OUTPUT\_OD}{GPIO\_MODE\_OUTPUT\_OD}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+OD~(\mbox{\hyperlink{group___g_p_i_o___private___constants_ga62f387670dad30bb7478b496c8b2456f}{MODE\+\_\+\+OD}} $\vert$ \mbox{\hyperlink{group___g_p_i_o___private___constants_ga3b23ec3cf56d4fc73dd1185b7f2792d6}{MODE\+\_\+\+OUTPUT}})}
+
+Output Open Drain Mode ~\newline
+ \mbox{\Hypertarget{group___g_p_i_o__mode__define_ga1013838a64cec2f8c88f079c449d1982}\label{group___g_p_i_o__mode__define_ga1013838a64cec2f8c88f079c449d1982}} 
+\index{GPIO mode define@{GPIO mode define}!GPIO\_MODE\_OUTPUT\_PP@{GPIO\_MODE\_OUTPUT\_PP}}
+\index{GPIO\_MODE\_OUTPUT\_PP@{GPIO\_MODE\_OUTPUT\_PP}!GPIO mode define@{GPIO mode define}}
+\doxysubsubsection{\texorpdfstring{GPIO\_MODE\_OUTPUT\_PP}{GPIO\_MODE\_OUTPUT\_PP}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+MODE\+\_\+\+OUTPUT\+\_\+\+PP~(\mbox{\hyperlink{group___g_p_i_o___private___constants_gae84412164dbbf5939197b4762a1e667b}{MODE\+\_\+\+PP}} $\vert$ \mbox{\hyperlink{group___g_p_i_o___private___constants_ga3b23ec3cf56d4fc73dd1185b7f2792d6}{MODE\+\_\+\+OUTPUT}})}
+
+Output Push Pull Mode ~\newline
+ 

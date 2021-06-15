@@ -1,7 +1,9 @@
-/*
- * macros.h
- *
- *  Created on: 15 cze 2021
+/**
+ ******************************************************************************
+ * @file    macros.h
+ * @brief   Plik zawiera makra i zmienne globalne programu
+ ******************************************************************************
+ * *  Created on: Jun 8, 2021
  *      Author: KUBA
  */
 

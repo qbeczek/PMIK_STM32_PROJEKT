@@ -1,3 +1,11 @@
+/**
+ ******************************************************************************
+ * @file    fonts.h
+ * @brief   Plik zawiera prototypy funkcji pliku fonts.c
+ ******************************************************************************
+ * *  Created on: Jun 8, 2021
+ *      Author: KUBA
+ */
 /* vim: set ai et ts=4 sw=4: */
 #ifndef __FONTS_H__
 #define __FONTS_H__
@@ -5,11 +13,10 @@
 #include <stdint.h>
 
 typedef struct {
-    const uint8_t width;
-    uint8_t height;
-    const uint16_t *data;
+	const uint8_t width;
+	uint8_t height;
+	const uint16_t *data;
 } FontDef;
-
 
 extern FontDef Font_7x10;
 extern FontDef Font_11x18;

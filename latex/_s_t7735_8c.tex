@@ -1,0 +1,98 @@
+\hypertarget{_s_t7735_8c}{}\doxysection{Dokumentacja pliku D\+:/\+Studia/\+S5/\+PMIK/workspace\+\_\+\+IDE/12\+\_\+\+ST7735/\+Core/\+Src/\+ST7735.c}
+\label{_s_t7735_8c}\index{D:/Studia/S5/PMIK/workspace\_IDE/12\_ST7735/Core/Src/ST7735.c@{D:/Studia/S5/PMIK/workspace\_IDE/12\_ST7735/Core/Src/ST7735.c}}
+
+
+Plik zawiera definicje oraz funckje potrzebne do sterowania wyświetlaczem ST7735.  
+
+
+{\ttfamily \#include $<$ST7735.\+h$>$}\newline
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_aa9c87230a022cbb6e5ea2c114396fa4d}\label{_s_t7735_8c_aa9c87230a022cbb6e5ea2c114396fa4d}} 
+void {\bfseries ST7735\+\_\+\+Select} ()
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_a37a44640340fd043ef5ce296bc24a016}\label{_s_t7735_8c_a37a44640340fd043ef5ce296bc24a016}} 
+void {\bfseries ST7735\+\_\+\+Unselect} ()
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_a896fb75b95f311ff341d2eff16ab7679}\label{_s_t7735_8c_a896fb75b95f311ff341d2eff16ab7679}} 
+void {\bfseries ST7735\+\_\+\+Reset} ()
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_af7ff325f536b13d451ba058dc29e42f7}\label{_s_t7735_8c_af7ff325f536b13d451ba058dc29e42f7}} 
+void {\bfseries ST7735\+\_\+\+Write\+Command} (uint8\+\_\+t cmd)
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_a1328b5ec8cb3be858b479e8ba3b30b39}\label{_s_t7735_8c_a1328b5ec8cb3be858b479e8ba3b30b39}} 
+void {\bfseries ST7735\+\_\+\+Write\+Data} (uint8\+\_\+t $\ast$buff, size\+\_\+t buff\+\_\+size)
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_a2bd507a8769e21091d18f387609a940c}\label{_s_t7735_8c_a2bd507a8769e21091d18f387609a940c}} 
+void {\bfseries Display\+Init} (const uint8\+\_\+t $\ast$addr)
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_a27d6acda7c0e86f0df6e620b7bb93196}\label{_s_t7735_8c_a27d6acda7c0e86f0df6e620b7bb93196}} 
+void {\bfseries ST7735\+\_\+\+Set\+Address\+Window} (uint8\+\_\+t x0, uint8\+\_\+t y0, uint8\+\_\+t x1, uint8\+\_\+t y1)
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_ac56c0f79391cbe3e89aad1cff6c59aed}\label{_s_t7735_8c_ac56c0f79391cbe3e89aad1cff6c59aed}} 
+void {\bfseries ST7735\+\_\+\+Init} (uint8\+\_\+t \mbox{\hyperlink{_s_t7735_8h_a31ef40b2ca90f868c7d76754d0100c3b}{rotation}})
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_ac07019a4990ece959dd04dd58339f839}\label{_s_t7735_8c_ac07019a4990ece959dd04dd58339f839}} 
+void {\bfseries ST7735\+\_\+\+Set\+Rotation} (uint8\+\_\+t m)
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_a5f14e27ee982d8839948ece78c0cbf48}\label{_s_t7735_8c_a5f14e27ee982d8839948ece78c0cbf48}} 
+void {\bfseries ST7735\+\_\+\+Draw\+Pixel} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_a07cdf241ad5fcf0ecd605f9c6853f107}\label{_s_t7735_8c_a07cdf241ad5fcf0ecd605f9c6853f107}} 
+void {\bfseries ST7735\+\_\+\+Write\+Char} (uint16\+\_\+t x, uint16\+\_\+t y, char ch, \mbox{\hyperlink{struct_font_def}{Font\+Def}} font, uint16\+\_\+t color, uint16\+\_\+t bgcolor)
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_a58047936eeaceca83d61fb3e47d8215a}\label{_s_t7735_8c_a58047936eeaceca83d61fb3e47d8215a}} 
+void {\bfseries ST7735\+\_\+\+Write\+String} (uint16\+\_\+t x, uint16\+\_\+t y, const char $\ast$str, \mbox{\hyperlink{struct_font_def}{Font\+Def}} font, uint16\+\_\+t color, uint16\+\_\+t bgcolor)
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_ae91430b14654022f725f61a9b4eecaf7}\label{_s_t7735_8c_ae91430b14654022f725f61a9b4eecaf7}} 
+void {\bfseries ST7735\+\_\+\+Fill\+Rectangle} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t w, uint16\+\_\+t h, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_a7e1f56549e23caf81fa4f1eadf85875f}\label{_s_t7735_8c_a7e1f56549e23caf81fa4f1eadf85875f}} 
+void {\bfseries ST7735\+\_\+\+Draw\+Image} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t w, uint16\+\_\+t h, const uint16\+\_\+t $\ast$data)
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_a1a037b05b226b6884774a979ca2051ed}\label{_s_t7735_8c_a1a037b05b226b6884774a979ca2051ed}} 
+void {\bfseries ST7735\+\_\+\+Invert\+Colors} (bool invert)
+\end{DoxyCompactItemize}
+\doxysubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_t7735_8c_ab8a2474a84dad7db7e3440dec7f6f5a0}\label{_s_t7735_8c_ab8a2474a84dad7db7e3440dec7f6f5a0}} 
+const uint8\+\_\+t {\bfseries init\+\_\+cmds1} \mbox{[}$\,$\mbox{]}
+\item 
+const uint8\+\_\+t {\bfseries init\+\_\+cmds3} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Plik zawiera definicje oraz funckje potrzebne do sterowania wyświetlaczem ST7735. 
+
+
+
+\doxysubsection{Dokumentacja zmiennych}
+\mbox{\Hypertarget{_s_t7735_8c_a84840c580dcb96c81f383856986a8df9}\label{_s_t7735_8c_a84840c580dcb96c81f383856986a8df9}} 
+\index{ST7735.c@{ST7735.c}!init\_cmds3@{init\_cmds3}}
+\index{init\_cmds3@{init\_cmds3}!ST7735.c@{ST7735.c}}
+\doxysubsubsection{\texorpdfstring{init\_cmds3}{init\_cmds3}}
+{\footnotesize\ttfamily const uint8\+\_\+t init\+\_\+cmds3\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Wartość początkowa\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{            }
+\DoxyCodeLine{    4,                        }
+\DoxyCodeLine{    ST7735\_GMCTRP1, 16      , }
+\DoxyCodeLine{      0x02, 0x1c, 0x07, 0x12,}
+\DoxyCodeLine{      0x37, 0x32, 0x29, 0x2d,}
+\DoxyCodeLine{      0x29, 0x25, 0x2B, 0x39,}
+\DoxyCodeLine{      0x00, 0x01, 0x03, 0x10,}
+\DoxyCodeLine{    ST7735\_GMCTRN1, 16      , }
+\DoxyCodeLine{      0x03, 0x1d, 0x07, 0x06,}
+\DoxyCodeLine{      0x2E, 0x2C, 0x29, 0x2D,}
+\DoxyCodeLine{      0x2E, 0x2E, 0x37, 0x3F,}
+\DoxyCodeLine{      0x00, 0x00, 0x02, 0x10,}
+\DoxyCodeLine{    ST7735\_NORON  ,    DELAY, }
+\DoxyCodeLine{      10,                     }
+\DoxyCodeLine{    ST7735\_DISPON ,    DELAY, }
+\DoxyCodeLine{      100 \}}
+
+\end{DoxyCode}

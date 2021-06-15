@@ -1,0 +1,131 @@
+\hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c}{}\doxysection{Dokumentacja pliku D\+:/\+Studia/\+S5/\+PMIK/workspace\+\_\+\+IDE/12\+\_\+\+ST7735/\+Core/\+Src/\+GFX\+\_\+\+FUNCTIONS.c}
+\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c}\index{D:/Studia/S5/PMIK/workspace\_IDE/12\_ST7735/Core/Src/GFX\_FUNCTIONS.c@{D:/Studia/S5/PMIK/workspace\_IDE/12\_ST7735/Core/Src/GFX\_FUNCTIONS.c}}
+
+
+Plik zawiera funkcje wyświetlacza ST7735.  
+
+
+{\ttfamily \#include $<$ST7735.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdlib.\+h\char`\"{}}\newline
+\doxysubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries \+\_\+swap\+\_\+int16\+\_\+t}(a,  b)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_ac6afabdc09a49a433ee19d8a9486056d}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_ac6afabdc09a49a433ee19d8a9486056d}} 
+\#define {\bfseries min}(a,  b)~(((a) $<$ (b)) ? (a) \+: (b))
+\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_aa593955cd418701cfc3f8988e7da5f9d}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_aa593955cd418701cfc3f8988e7da5f9d}} 
+void {\bfseries draw\+Pixel} (int16\+\_\+t x, int16\+\_\+t y, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a782a6ae0beeb0de459e9f7cd5a1ec28e}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a782a6ae0beeb0de459e9f7cd5a1ec28e}} 
+void {\bfseries fill\+Rect} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t w, int16\+\_\+t h, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_adb364387ce221df09ec6702d49a1ac0a}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_adb364387ce221df09ec6702d49a1ac0a}} 
+void {\bfseries write\+Pixel} (int16\+\_\+t x, int16\+\_\+t y, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a813a14c112707130b8fbb95d8eed2c1b}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a813a14c112707130b8fbb95d8eed2c1b}} 
+void {\bfseries write\+Line} (int16\+\_\+t x0, int16\+\_\+t y0, int16\+\_\+t x1, int16\+\_\+t y1, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a5f73e8acef67fc2289cdafba93c45619}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a5f73e8acef67fc2289cdafba93c45619}} 
+void {\bfseries draw\+Fast\+VLine} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t h, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_ac0ad75ef0754ec11669d3525f414224a}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_ac0ad75ef0754ec11669d3525f414224a}} 
+void {\bfseries draw\+Fast\+HLine} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t w, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_ae8fa5b4387ee76b1bec15c8ad5576ef2}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_ae8fa5b4387ee76b1bec15c8ad5576ef2}} 
+void {\bfseries draw\+Line} (int16\+\_\+t x0, int16\+\_\+t y0, int16\+\_\+t x1, int16\+\_\+t y1, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_ac5d83da7e0038f46138d6f6fb4eacb17}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_ac5d83da7e0038f46138d6f6fb4eacb17}} 
+void {\bfseries draw\+Circle} (int16\+\_\+t x0, int16\+\_\+t y0, int16\+\_\+t r, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a715f07f1c3049289b475ab80c9498891}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a715f07f1c3049289b475ab80c9498891}} 
+void {\bfseries draw\+Circle\+Helper} (int16\+\_\+t x0, int16\+\_\+t y0, int16\+\_\+t r, uint8\+\_\+t cornername, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_ab4cc674b48bfb72d86559fd57460064e}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_ab4cc674b48bfb72d86559fd57460064e}} 
+void {\bfseries fill\+Circle\+Helper} (int16\+\_\+t x0, int16\+\_\+t y0, int16\+\_\+t r, uint8\+\_\+t corners, int16\+\_\+t delta, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a7804918953c21c0aeb53aae1c1e3a2b0}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a7804918953c21c0aeb53aae1c1e3a2b0}} 
+void {\bfseries fill\+Circle} (int16\+\_\+t x0, int16\+\_\+t y0, int16\+\_\+t r, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a8de358b8b8631b936a5cc10f8a84e0e2}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a8de358b8b8631b936a5cc10f8a84e0e2}} 
+void {\bfseries draw\+Rect} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t w, int16\+\_\+t h, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a61dd3c1fb58f35e68f0ca10529524db0}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a61dd3c1fb58f35e68f0ca10529524db0}} 
+void {\bfseries draw\+Round\+Rect} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t w, int16\+\_\+t h, int16\+\_\+t r, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a738db8107c50fd5475adb0f9abd9ceef}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a738db8107c50fd5475adb0f9abd9ceef}} 
+void {\bfseries fill\+Round\+Rect} (int16\+\_\+t x, int16\+\_\+t y, int16\+\_\+t w, int16\+\_\+t h, int16\+\_\+t r, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a773009a600146d77e2cb22b3750ce953}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a773009a600146d77e2cb22b3750ce953}} 
+void {\bfseries draw\+Triangle} (int16\+\_\+t x0, int16\+\_\+t y0, int16\+\_\+t x1, int16\+\_\+t y1, int16\+\_\+t x2, int16\+\_\+t y2, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_af2af7b05b0c08255cd597d259df43b8a}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_af2af7b05b0c08255cd597d259df43b8a}} 
+void {\bfseries fill\+Triangle} (int16\+\_\+t x0, int16\+\_\+t y0, int16\+\_\+t x1, int16\+\_\+t y1, int16\+\_\+t x2, int16\+\_\+t y2, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a89e5d63b51c1a17b52a87df95b4390c3}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a89e5d63b51c1a17b52a87df95b4390c3}} 
+void {\bfseries fill\+Screen} (uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a7eb2ca72d9e4e3598d5d852701e8c7c1}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a7eb2ca72d9e4e3598d5d852701e8c7c1}} 
+void {\bfseries test\+Lines} (uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a6770158baf4d49dedc102e030f291527}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a6770158baf4d49dedc102e030f291527}} 
+void {\bfseries test\+Fast\+Lines} (uint16\+\_\+t color1, uint16\+\_\+t color2)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a47fb57d15e3208b7e7f45f83fbee09a9}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a47fb57d15e3208b7e7f45f83fbee09a9}} 
+void {\bfseries test\+Rects} (uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a06cb93972d94f5b83eae6ad989aa5201}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a06cb93972d94f5b83eae6ad989aa5201}} 
+void {\bfseries test\+Filled\+Rects} (uint16\+\_\+t color1, uint16\+\_\+t color2)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a9d72117b5c21948fd28d97d7ab251dad}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a9d72117b5c21948fd28d97d7ab251dad}} 
+void {\bfseries test\+Filled\+Circles} (uint8\+\_\+t radius, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a8929fbc3eadbf06e6b2c6c164bd28a54}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a8929fbc3eadbf06e6b2c6c164bd28a54}} 
+void {\bfseries test\+Circles} (uint8\+\_\+t radius, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a2bcc0863d6e6a884993fa3ccd3aa6403}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a2bcc0863d6e6a884993fa3ccd3aa6403}} 
+void {\bfseries test\+Triangles} ()
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a94b8d205f056cc83d5d16b8685964425}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a94b8d205f056cc83d5d16b8685964425}} 
+void {\bfseries test\+Filled\+Triangles} ()
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a9a5ead6b3620319148b9430e047770f2}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a9a5ead6b3620319148b9430e047770f2}} 
+void {\bfseries test\+Round\+Rects} ()
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_acbefabc670b3f2f201925dff98096ca8}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_acbefabc670b3f2f201925dff98096ca8}} 
+void {\bfseries test\+Filled\+Round\+Rects} ()
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a0c8eb7221ef069938c2f3cd8fe16350c}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a0c8eb7221ef069938c2f3cd8fe16350c}} 
+void {\bfseries test\+Fill\+Screen} ()
+\item 
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a2c84e7b40cda8864ab0bcfd6547439b3}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a2c84e7b40cda8864ab0bcfd6547439b3}} 
+void {\bfseries test\+All} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Plik zawiera funkcje wyświetlacza ST7735. 
+
+
+
+\doxysubsection{Dokumentacja definicji}
+\mbox{\Hypertarget{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a4e000513b9464b4b8a13b6ac95f87f80}\label{_g_f_x___f_u_n_c_t_i_o_n_s_8c_a4e000513b9464b4b8a13b6ac95f87f80}} 
+\index{GFX\_FUNCTIONS.c@{GFX\_FUNCTIONS.c}!\_swap\_int16\_t@{\_swap\_int16\_t}}
+\index{\_swap\_int16\_t@{\_swap\_int16\_t}!GFX\_FUNCTIONS.c@{GFX\_FUNCTIONS.c}}
+\doxysubsubsection{\texorpdfstring{\_swap\_int16\_t}{\_swap\_int16\_t}}
+{\footnotesize\ttfamily \#define \+\_\+swap\+\_\+int16\+\_\+t(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})}
+
+{\bfseries Wartość\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \{                                                                            \(\backslash\)}
+\DoxyCodeLine{    int16\_t t = a;                                                             \(\backslash\)}
+\DoxyCodeLine{    a = b;                                                                     \(\backslash\)}
+\DoxyCodeLine{    b = t;                                                                     \(\backslash\)}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}

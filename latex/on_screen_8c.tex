@@ -1,0 +1,156 @@
+\hypertarget{on_screen_8c}{}\doxysection{Dokumentacja pliku D\+:/\+Studia/\+S5/\+PMIK/workspace\+\_\+\+IDE/12\+\_\+\+ST7735/\+Core/\+Src/on\+Screen.c}
+\label{on_screen_8c}\index{D:/Studia/S5/PMIK/workspace\_IDE/12\_ST7735/Core/Src/onScreen.c@{D:/Studia/S5/PMIK/workspace\_IDE/12\_ST7735/Core/Src/onScreen.c}}
+
+
+Plik zawiera funkcje wyświetlające dane na wyświetlaczu ST7735.  
+
+
+{\ttfamily \#include \char`\"{}on\+Screen.\+h\char`\"{}}\newline
+\doxysubsection*{Definicje}
+\begin{Indent}\textbf{ Maksymalny rozmiar bufora}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{on_screen_8c_a7244ab798f58214294b580ca0bb48552}\label{on_screen_8c_a7244ab798f58214294b580ca0bb48552}} 
+\#define {\bfseries MAX\+\_\+\+BUF\+\_\+\+SIZE}~10
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Bufory używane do konwersji danych}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{on_screen_8c_a0c4d7d42bfa2014d40a689a87c9ffb46}\label{on_screen_8c_a0c4d7d42bfa2014d40a689a87c9ffb46}} 
+char {\bfseries TEMP\+\_\+\+BUF} \mbox{[}MAX\+\_\+\+BUF\+\_\+\+SIZE\mbox{]}
+\item 
+\mbox{\Hypertarget{on_screen_8c_a92699a6f859303bcbeece8cba720a8c3}\label{on_screen_8c_a92699a6f859303bcbeece8cba720a8c3}} 
+char {\bfseries PRES\+\_\+\+BUF} \mbox{[}MAX\+\_\+\+BUF\+\_\+\+SIZE\mbox{]}
+\item 
+\mbox{\Hypertarget{on_screen_8c_aeffcbfd846ea3fe575e9377410cbdee9}\label{on_screen_8c_aeffcbfd846ea3fe575e9377410cbdee9}} 
+char {\bfseries ERR\+\_\+\+TEMP\+\_\+\+BUF} \mbox{[}MAX\+\_\+\+BUF\+\_\+\+SIZE\mbox{]}
+\item 
+\mbox{\Hypertarget{on_screen_8c_a2577d53facd4338c58c0310d0abc5fea}\label{on_screen_8c_a2577d53facd4338c58c0310d0abc5fea}} 
+char {\bfseries ERR\+\_\+\+PRES\+\_\+\+BUF} \mbox{[}MAX\+\_\+\+BUF\+\_\+\+SIZE\mbox{]}
+\item 
+void \mbox{\hyperlink{on_screen_8c_a59fa0fe450abef93101d9783e064e8cb}{write\+Temp}} (double temperature)
+\begin{DoxyCompactList}\small\item\em funkcja wyświetlająca temperaturę na wyświetlaczu ST7735 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{on_screen_8c_aba66b9f9aa7f6c48938ece453a2b60c9}{write\+Press}} (double pressure)
+\begin{DoxyCompactList}\small\item\em funkcja wyświetlająca cisnienie na wyświetlaczu ST7735 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{on_screen_8c_a51326caf5ff12dd4ebca4fecec744f14}{write\+Menu}} (void)
+\begin{DoxyCompactList}\small\item\em funkcja wyświetlająca menu na wyświetlaczu ST7735 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{on_screen_8c_ad01b90228da2c4c2072975053a63832e}{err\+Menu}} (int err\+Temp, int err\+Pres)
+\begin{DoxyCompactList}\small\item\em funkcja wyświetlająca błędy odczytu ciśnienia i temperatury na wyświetlaczu ST7735 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{on_screen_8c_ac210b3139cdf3d5cc3b6fe973fa2744a}{write\+Temp\+High\+Warn}} (double temperature)
+\begin{DoxyCompactList}\small\item\em funkcja wyświetlająca ostrzeżenie o wysokiej temperaturze na wyświetlaczu ST7735 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{on_screen_8c_a9bec7dca13be3390fa2be91abbee3728}{write\+Temp\+Low\+Warn}} (double temperature)
+\begin{DoxyCompactList}\small\item\em funkcja wyświetlająca ostrzeżenie o zbyt niskiej temperaturze na wyświetlaczu ST7735 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Plik zawiera funkcje wyświetlające dane na wyświetlaczu ST7735. 
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{on_screen_8c_ad01b90228da2c4c2072975053a63832e}\label{on_screen_8c_ad01b90228da2c4c2072975053a63832e}} 
+\index{onScreen.c@{onScreen.c}!errMenu@{errMenu}}
+\index{errMenu@{errMenu}!onScreen.c@{onScreen.c}}
+\doxysubsubsection{\texorpdfstring{errMenu()}{errMenu()}}
+{\footnotesize\ttfamily void err\+Menu (\begin{DoxyParamCaption}\item[{int}]{err\+Temp,  }\item[{int}]{err\+Pres }\end{DoxyParamCaption})}
+
+
+
+funkcja wyświetlająca błędy odczytu ciśnienia i temperatury na wyświetlaczu ST7735 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em err\+Temp} & \+: kod błędu odczytu temperatury \\
+\hline
+\mbox{\texttt{ in}}  & {\em err\+Pres} & \+: kod błędu odczytu ciśnienia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{on_screen_8c_a51326caf5ff12dd4ebca4fecec744f14}\label{on_screen_8c_a51326caf5ff12dd4ebca4fecec744f14}} 
+\index{onScreen.c@{onScreen.c}!writeMenu@{writeMenu}}
+\index{writeMenu@{writeMenu}!onScreen.c@{onScreen.c}}
+\doxysubsubsection{\texorpdfstring{writeMenu()}{writeMenu()}}
+{\footnotesize\ttfamily void write\+Menu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+funkcja wyświetlająca menu na wyświetlaczu ST7735 
+
+\begin{DoxyReturn}{Zwraca}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{on_screen_8c_aba66b9f9aa7f6c48938ece453a2b60c9}\label{on_screen_8c_aba66b9f9aa7f6c48938ece453a2b60c9}} 
+\index{onScreen.c@{onScreen.c}!writePress@{writePress}}
+\index{writePress@{writePress}!onScreen.c@{onScreen.c}}
+\doxysubsubsection{\texorpdfstring{writePress()}{writePress()}}
+{\footnotesize\ttfamily void write\+Press (\begin{DoxyParamCaption}\item[{double}]{pressure }\end{DoxyParamCaption})}
+
+
+
+funkcja wyświetlająca cisnienie na wyświetlaczu ST7735 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em pressure} & \+: Cisnienie przekazane do funkcji\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{on_screen_8c_a59fa0fe450abef93101d9783e064e8cb}\label{on_screen_8c_a59fa0fe450abef93101d9783e064e8cb}} 
+\index{onScreen.c@{onScreen.c}!writeTemp@{writeTemp}}
+\index{writeTemp@{writeTemp}!onScreen.c@{onScreen.c}}
+\doxysubsubsection{\texorpdfstring{writeTemp()}{writeTemp()}}
+{\footnotesize\ttfamily void write\+Temp (\begin{DoxyParamCaption}\item[{double}]{temperature }\end{DoxyParamCaption})}
+
+
+
+funkcja wyświetlająca temperaturę na wyświetlaczu ST7735 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em temperature} & \+: Temperatura przekazana do funkcji\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{on_screen_8c_ac210b3139cdf3d5cc3b6fe973fa2744a}\label{on_screen_8c_ac210b3139cdf3d5cc3b6fe973fa2744a}} 
+\index{onScreen.c@{onScreen.c}!writeTempHighWarn@{writeTempHighWarn}}
+\index{writeTempHighWarn@{writeTempHighWarn}!onScreen.c@{onScreen.c}}
+\doxysubsubsection{\texorpdfstring{writeTempHighWarn()}{writeTempHighWarn()}}
+{\footnotesize\ttfamily void write\+Temp\+High\+Warn (\begin{DoxyParamCaption}\item[{double}]{temperature }\end{DoxyParamCaption})}
+
+
+
+funkcja wyświetlająca ostrzeżenie o wysokiej temperaturze na wyświetlaczu ST7735 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em temperature} & \+: Temperatura przekazana do funkcji\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{on_screen_8c_a9bec7dca13be3390fa2be91abbee3728}\label{on_screen_8c_a9bec7dca13be3390fa2be91abbee3728}} 
+\index{onScreen.c@{onScreen.c}!writeTempLowWarn@{writeTempLowWarn}}
+\index{writeTempLowWarn@{writeTempLowWarn}!onScreen.c@{onScreen.c}}
+\doxysubsubsection{\texorpdfstring{writeTempLowWarn()}{writeTempLowWarn()}}
+{\footnotesize\ttfamily void write\+Temp\+Low\+Warn (\begin{DoxyParamCaption}\item[{double}]{temperature }\end{DoxyParamCaption})}
+
+
+
+funkcja wyświetlająca ostrzeżenie o zbyt niskiej temperaturze na wyświetlaczu ST7735 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em temperature} & \+: Temperatura przekazana do funkcji\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+void 
+\end{DoxyReturn}

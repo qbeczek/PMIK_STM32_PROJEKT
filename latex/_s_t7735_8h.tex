@@ -1,0 +1,277 @@
+\hypertarget{_s_t7735_8h}{}\doxysection{Dokumentacja pliku D\+:/\+Studia/\+S5/\+PMIK/workspace\+\_\+\+IDE/12\+\_\+\+ST7735/\+Core/\+Inc/\+ST7735.h}
+\label{_s_t7735_8h}\index{D:/Studia/S5/PMIK/workspace\_IDE/12\_ST7735/Core/Inc/ST7735.h@{D:/Studia/S5/PMIK/workspace\_IDE/12\_ST7735/Core/Inc/ST7735.h}}
+
+
+Plik zawiera prototypy funkcji pliku \mbox{\hyperlink{_s_t7735_8c}{ST7735.\+c}}.  
+
+
+{\ttfamily \#include \char`\"{}fonts.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a673d8974f91513579c0b700e86bf9d61}\label{_s_t7735_8h_a673d8974f91513579c0b700e86bf9d61}} 
+\#define {\bfseries ST7735\+\_\+\+SPI\+\_\+\+PORT}~hspi2
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_ab313428e4d073b4508a15ca9d593733e}\label{_s_t7735_8h_ab313428e4d073b4508a15ca9d593733e}} 
+\#define {\bfseries CS\+\_\+\+PORT}~GPIOA
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_abfcf05153ddbd63d5aff5d018867cc19}\label{_s_t7735_8h_abfcf05153ddbd63d5aff5d018867cc19}} 
+\#define {\bfseries CS\+\_\+\+PIN}~GPIO\+\_\+\+PIN\+\_\+6
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a8732c21c96e2e1c5aa26deca8f162d8d}\label{_s_t7735_8h_a8732c21c96e2e1c5aa26deca8f162d8d}} 
+\#define {\bfseries DC\+\_\+\+PORT}~GPIOB
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a4131edec89d3efa5af72db14ee3119c2}\label{_s_t7735_8h_a4131edec89d3efa5af72db14ee3119c2}} 
+\#define {\bfseries DC\+\_\+\+PIN}~GPIO\+\_\+\+PIN\+\_\+6
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a1d80085d0c3b7927d69ccb5626ab86c9}\label{_s_t7735_8h_a1d80085d0c3b7927d69ccb5626ab86c9}} 
+\#define {\bfseries RST\+\_\+\+PORT}~GPIOA
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a36932b0e869e0114f32e255f61306d6b}\label{_s_t7735_8h_a36932b0e869e0114f32e255f61306d6b}} 
+\#define {\bfseries RST\+\_\+\+PIN}~GPIO\+\_\+\+PIN\+\_\+7
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_adeb863ca0ef225a499c56709805c78f6}\label{_s_t7735_8h_adeb863ca0ef225a499c56709805c78f6}} 
+\#define {\bfseries ST7735\+\_\+\+IS\+\_\+160\+X128}~1
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_acbd7720b92e7596997e7787ec0a08851}\label{_s_t7735_8h_acbd7720b92e7596997e7787ec0a08851}} 
+\#define {\bfseries ST7735\+\_\+\+WIDTH}~128
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a30f04ccc4a27354d46bbe5d52df3cb16}\label{_s_t7735_8h_a30f04ccc4a27354d46bbe5d52df3cb16}} 
+\#define {\bfseries ST7735\+\_\+\+HEIGHT}~160
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a62249e384b997229a3e2ae74ade334e2}\label{_s_t7735_8h_a62249e384b997229a3e2ae74ade334e2}} 
+\#define {\bfseries DELAY}~0x80
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_ade36084a6eae4cdaf6ded856c40ef4de}\label{_s_t7735_8h_ade36084a6eae4cdaf6ded856c40ef4de}} 
+\#define {\bfseries ST7735\+\_\+\+MADCTL\+\_\+\+MY}~0x80
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_af53cb1a72a2846f2de29700ab7e13ffa}\label{_s_t7735_8h_af53cb1a72a2846f2de29700ab7e13ffa}} 
+\#define {\bfseries ST7735\+\_\+\+MADCTL\+\_\+\+MX}~0x40
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a73b5226dd663bc506c52983a278d9d7d}\label{_s_t7735_8h_a73b5226dd663bc506c52983a278d9d7d}} 
+\#define {\bfseries ST7735\+\_\+\+MADCTL\+\_\+\+MV}~0x20
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a76993eacc19f826270cae7456bfc0b96}\label{_s_t7735_8h_a76993eacc19f826270cae7456bfc0b96}} 
+\#define {\bfseries ST7735\+\_\+\+MADCTL\+\_\+\+ML}~0x10
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a8242c78cf7bcc5a284c26593e403ce33}\label{_s_t7735_8h_a8242c78cf7bcc5a284c26593e403ce33}} 
+\#define {\bfseries ST7735\+\_\+\+MADCTL\+\_\+\+RGB}~0x00
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a782f5eeabe19bcbc85a29ba5aa3b649f}\label{_s_t7735_8h_a782f5eeabe19bcbc85a29ba5aa3b649f}} 
+\#define {\bfseries ST7735\+\_\+\+MADCTL\+\_\+\+BGR}~0x08
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a00810e121ac2cfeccf43720b4dbc75cc}\label{_s_t7735_8h_a00810e121ac2cfeccf43720b4dbc75cc}} 
+\#define {\bfseries ST7735\+\_\+\+MADCTL\+\_\+\+MH}~0x04
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a1b574de2db49ecfa63ce0216112903cc}\label{_s_t7735_8h_a1b574de2db49ecfa63ce0216112903cc}} 
+\#define {\bfseries ST7735\+\_\+\+NOP}~0x00
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a2816f2fce9a937ced8567b2c2797767b}\label{_s_t7735_8h_a2816f2fce9a937ced8567b2c2797767b}} 
+\#define {\bfseries ST7735\+\_\+\+SWRESET}~0x01
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_aec4c29f7c63a6c6f168764b2bcec50cf}\label{_s_t7735_8h_aec4c29f7c63a6c6f168764b2bcec50cf}} 
+\#define {\bfseries ST7735\+\_\+\+RDDID}~0x04
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_acb42f35cd7e667ba514f8b6022d0dac5}\label{_s_t7735_8h_acb42f35cd7e667ba514f8b6022d0dac5}} 
+\#define {\bfseries ST7735\+\_\+\+RDDST}~0x09
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a5656049de5d79e5a77260b69042179af}\label{_s_t7735_8h_a5656049de5d79e5a77260b69042179af}} 
+\#define {\bfseries ST7735\+\_\+\+SLPIN}~0x10
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_aa061cfc0b8f0fea3e70b59d72f6e1caa}\label{_s_t7735_8h_aa061cfc0b8f0fea3e70b59d72f6e1caa}} 
+\#define {\bfseries ST7735\+\_\+\+SLPOUT}~0x11
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_aac679645f819d98761965299f19620f6}\label{_s_t7735_8h_aac679645f819d98761965299f19620f6}} 
+\#define {\bfseries ST7735\+\_\+\+PTLON}~0x12
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a9e059398ac81ef081169997c28f908cb}\label{_s_t7735_8h_a9e059398ac81ef081169997c28f908cb}} 
+\#define {\bfseries ST7735\+\_\+\+NORON}~0x13
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_ad66cc531ec897ce0465ff21d152b756a}\label{_s_t7735_8h_ad66cc531ec897ce0465ff21d152b756a}} 
+\#define {\bfseries ST7735\+\_\+\+INVOFF}~0x20
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_ae670a3d34e887559366735ca999e80d3}\label{_s_t7735_8h_ae670a3d34e887559366735ca999e80d3}} 
+\#define {\bfseries ST7735\+\_\+\+INVON}~0x21
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a1f9701dd8594cc2fb7c6f783b05d2f65}\label{_s_t7735_8h_a1f9701dd8594cc2fb7c6f783b05d2f65}} 
+\#define {\bfseries ST7735\+\_\+\+DISPOFF}~0x28
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a1afa532348b3d081b7b1ecdfa9ba17e0}\label{_s_t7735_8h_a1afa532348b3d081b7b1ecdfa9ba17e0}} 
+\#define {\bfseries ST7735\+\_\+\+DISPON}~0x29
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a484d38defdf6303f4a8d19f994d0593d}\label{_s_t7735_8h_a484d38defdf6303f4a8d19f994d0593d}} 
+\#define {\bfseries ST7735\+\_\+\+CASET}~0x2A
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_ae879d0b7f5639d5ecd3d265d9971c979}\label{_s_t7735_8h_ae879d0b7f5639d5ecd3d265d9971c979}} 
+\#define {\bfseries ST7735\+\_\+\+RASET}~0x2B
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_aa9a60c99890ac51b71eb799b68d5c6d5}\label{_s_t7735_8h_aa9a60c99890ac51b71eb799b68d5c6d5}} 
+\#define {\bfseries ST7735\+\_\+\+RAMWR}~0x2C
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a5cbfe14163815f14aea1a4a89ea2fffc}\label{_s_t7735_8h_a5cbfe14163815f14aea1a4a89ea2fffc}} 
+\#define {\bfseries ST7735\+\_\+\+RAMRD}~0x2E
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a057611dfe567fd9095f27d40087e4948}\label{_s_t7735_8h_a057611dfe567fd9095f27d40087e4948}} 
+\#define {\bfseries ST7735\+\_\+\+PTLAR}~0x30
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a9caf06c78cdaba66cea553668103b759}\label{_s_t7735_8h_a9caf06c78cdaba66cea553668103b759}} 
+\#define {\bfseries ST7735\+\_\+\+COLMOD}~0x3A
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a74afa388731002f70e250770901f90a2}\label{_s_t7735_8h_a74afa388731002f70e250770901f90a2}} 
+\#define {\bfseries ST7735\+\_\+\+MADCTL}~0x36
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_aeb5c49fcdd239ab153f5d9b15304ca9c}\label{_s_t7735_8h_aeb5c49fcdd239ab153f5d9b15304ca9c}} 
+\#define {\bfseries ST7735\+\_\+\+FRMCTR1}~0x\+B1
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a3b416f231bb6eedec8cfcf277c6d36d3}\label{_s_t7735_8h_a3b416f231bb6eedec8cfcf277c6d36d3}} 
+\#define {\bfseries ST7735\+\_\+\+FRMCTR2}~0x\+B2
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a4afe2b326d709aaeb70c657f8210ea2b}\label{_s_t7735_8h_a4afe2b326d709aaeb70c657f8210ea2b}} 
+\#define {\bfseries ST7735\+\_\+\+FRMCTR3}~0x\+B3
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_addfb44b70c2b60a0d04e3d22611d54ee}\label{_s_t7735_8h_addfb44b70c2b60a0d04e3d22611d54ee}} 
+\#define {\bfseries ST7735\+\_\+\+INVCTR}~0x\+B4
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_ace47a845775310352dc7e2fae3e1586a}\label{_s_t7735_8h_ace47a845775310352dc7e2fae3e1586a}} 
+\#define {\bfseries ST7735\+\_\+\+DISSET5}~0x\+B6
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_ab4294b48d705690347bf0fed4af82697}\label{_s_t7735_8h_ab4294b48d705690347bf0fed4af82697}} 
+\#define {\bfseries ST7735\+\_\+\+PWCTR1}~0x\+C0
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_aef4c5d9e00b07b6fc601f8ad2dbbb101}\label{_s_t7735_8h_aef4c5d9e00b07b6fc601f8ad2dbbb101}} 
+\#define {\bfseries ST7735\+\_\+\+PWCTR2}~0x\+C1
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_ac69d092c9c2693807a2a992dbf297f24}\label{_s_t7735_8h_ac69d092c9c2693807a2a992dbf297f24}} 
+\#define {\bfseries ST7735\+\_\+\+PWCTR3}~0x\+C2
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a95b55308b48e83b1a3e2cf51393030f1}\label{_s_t7735_8h_a95b55308b48e83b1a3e2cf51393030f1}} 
+\#define {\bfseries ST7735\+\_\+\+PWCTR4}~0x\+C3
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a91cc0e141903ca80ad7fc6f108988184}\label{_s_t7735_8h_a91cc0e141903ca80ad7fc6f108988184}} 
+\#define {\bfseries ST7735\+\_\+\+PWCTR5}~0x\+C4
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_aa4d4dfc0e9e5b75add3eb42fd7987c29}\label{_s_t7735_8h_aa4d4dfc0e9e5b75add3eb42fd7987c29}} 
+\#define {\bfseries ST7735\+\_\+\+VMCTR1}~0x\+C5
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a904eaad54b53eec42bec05f81baee26f}\label{_s_t7735_8h_a904eaad54b53eec42bec05f81baee26f}} 
+\#define {\bfseries ST7735\+\_\+\+RDID1}~0x\+DA
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_aef8a3757b39dd1bf1d79920be09511ae}\label{_s_t7735_8h_aef8a3757b39dd1bf1d79920be09511ae}} 
+\#define {\bfseries ST7735\+\_\+\+RDID2}~0x\+DB
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a8a827d3b90198c117f3d744cc4201c68}\label{_s_t7735_8h_a8a827d3b90198c117f3d744cc4201c68}} 
+\#define {\bfseries ST7735\+\_\+\+RDID3}~0x\+DC
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a1ca62118c4ce1ed1d288c6958004188e}\label{_s_t7735_8h_a1ca62118c4ce1ed1d288c6958004188e}} 
+\#define {\bfseries ST7735\+\_\+\+RDID4}~0x\+DD
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a13453718ec9240ae7966d0d8995d0c8a}\label{_s_t7735_8h_a13453718ec9240ae7966d0d8995d0c8a}} 
+\#define {\bfseries ST7735\+\_\+\+PWCTR6}~0x\+FC
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_ad90bd9bbed9c95192a2b44b8f63f86e5}\label{_s_t7735_8h_ad90bd9bbed9c95192a2b44b8f63f86e5}} 
+\#define {\bfseries ST7735\+\_\+\+GMCTRP1}~0x\+E0
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_aad3c0783af31cd4c4e33bf8748e961fa}\label{_s_t7735_8h_aad3c0783af31cd4c4e33bf8748e961fa}} 
+\#define {\bfseries ST7735\+\_\+\+GMCTRN1}~0x\+E1
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a7b3b25cba33b07c303f3060fe41887f6}\label{_s_t7735_8h_a7b3b25cba33b07c303f3060fe41887f6}} 
+\#define {\bfseries BLACK}~0x0000
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a79d10e672abb49ad63eeaa8aaef57c38}\label{_s_t7735_8h_a79d10e672abb49ad63eeaa8aaef57c38}} 
+\#define {\bfseries BLUE}~0x001F
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a8d23feea868a983c8c2b661e1e16972f}\label{_s_t7735_8h_a8d23feea868a983c8c2b661e1e16972f}} 
+\#define {\bfseries RED}~0x\+F800
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_acfbc006ea433ad708fdee3e82996e721}\label{_s_t7735_8h_acfbc006ea433ad708fdee3e82996e721}} 
+\#define {\bfseries GREEN}~0x07\+E0
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_ad243f93c16bc4c1d3e0a13b84421d760}\label{_s_t7735_8h_ad243f93c16bc4c1d3e0a13b84421d760}} 
+\#define {\bfseries CYAN}~0x07\+FF
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a6f699060902f800f12aaae150f3a708e}\label{_s_t7735_8h_a6f699060902f800f12aaae150f3a708e}} 
+\#define {\bfseries MAGENTA}~0x\+F81F
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_abf681265909adf3d3e8116c93c0ba179}\label{_s_t7735_8h_abf681265909adf3d3e8116c93c0ba179}} 
+\#define {\bfseries YELLOW}~0x\+FFE0
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a87b537f5fa5c109d3c05c13d6b18f382}\label{_s_t7735_8h_a87b537f5fa5c109d3c05c13d6b18f382}} 
+\#define {\bfseries WHITE}~0x\+FFFF
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a8923437652621091f642ed424d08e297}\label{_s_t7735_8h_a8923437652621091f642ed424d08e297}} 
+\#define {\bfseries color565}(r,  g,  b)~(((r \& 0x\+F8) $<$$<$ 8) $\vert$ ((g \& 0x\+FC) $<$$<$ 3) $\vert$ ((b \& 0x\+F8) $>$$>$ 3))
+\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a37a44640340fd043ef5ce296bc24a016}\label{_s_t7735_8h_a37a44640340fd043ef5ce296bc24a016}} 
+void {\bfseries ST7735\+\_\+\+Unselect} ()
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_ac56c0f79391cbe3e89aad1cff6c59aed}\label{_s_t7735_8h_ac56c0f79391cbe3e89aad1cff6c59aed}} 
+void {\bfseries ST7735\+\_\+\+Init} (uint8\+\_\+t \mbox{\hyperlink{_s_t7735_8h_a31ef40b2ca90f868c7d76754d0100c3b}{rotation}})
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_ac07019a4990ece959dd04dd58339f839}\label{_s_t7735_8h_ac07019a4990ece959dd04dd58339f839}} 
+void {\bfseries ST7735\+\_\+\+Set\+Rotation} (uint8\+\_\+t m)
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a5f14e27ee982d8839948ece78c0cbf48}\label{_s_t7735_8h_a5f14e27ee982d8839948ece78c0cbf48}} 
+void {\bfseries ST7735\+\_\+\+Draw\+Pixel} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a58047936eeaceca83d61fb3e47d8215a}\label{_s_t7735_8h_a58047936eeaceca83d61fb3e47d8215a}} 
+void {\bfseries ST7735\+\_\+\+Write\+String} (uint16\+\_\+t x, uint16\+\_\+t y, const char $\ast$str, \mbox{\hyperlink{struct_font_def}{Font\+Def}} font, uint16\+\_\+t color, uint16\+\_\+t bgcolor)
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_ae91430b14654022f725f61a9b4eecaf7}\label{_s_t7735_8h_ae91430b14654022f725f61a9b4eecaf7}} 
+void {\bfseries ST7735\+\_\+\+Fill\+Rectangle} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t w, uint16\+\_\+t h, uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a3a14506207ab49aee2c40700b5036271}\label{_s_t7735_8h_a3a14506207ab49aee2c40700b5036271}} 
+void {\bfseries ST7735\+\_\+\+Fill\+Screen} (uint16\+\_\+t color)
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a7e1f56549e23caf81fa4f1eadf85875f}\label{_s_t7735_8h_a7e1f56549e23caf81fa4f1eadf85875f}} 
+void {\bfseries ST7735\+\_\+\+Draw\+Image} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t w, uint16\+\_\+t h, const uint16\+\_\+t $\ast$data)
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_a1a037b05b226b6884774a979ca2051ed}\label{_s_t7735_8h_a1a037b05b226b6884774a979ca2051ed}} 
+void {\bfseries ST7735\+\_\+\+Invert\+Colors} (bool invert)
+\end{DoxyCompactItemize}
+\doxysubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_ab9da65f935e805137e2eb4e18c5ab224}\label{_s_t7735_8h_ab9da65f935e805137e2eb4e18c5ab224}} 
+\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} {\bfseries hspi2}
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_aa975285804b0d86330779785b26cfd7e}\label{_s_t7735_8h_aa975285804b0d86330779785b26cfd7e}} 
+int16\+\_\+t \mbox{\hyperlink{_s_t7735_8h_aa975285804b0d86330779785b26cfd7e}{\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Display width as modified by current rotation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_t7735_8h_acf387915d5e076db6f5383e9604bf310}\label{_s_t7735_8h_acf387915d5e076db6f5383e9604bf310}} 
+int16\+\_\+t \mbox{\hyperlink{_s_t7735_8h_acf387915d5e076db6f5383e9604bf310}{\+\_\+height}}
+\begin{DoxyCompactList}\small\item\em Display height as modified by current rotation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_t7735_8h_a5b474ea4c4c40b5fa69b2f35f14f40ca}\label{_s_t7735_8h_a5b474ea4c4c40b5fa69b2f35f14f40ca}} 
+int16\+\_\+t \mbox{\hyperlink{_s_t7735_8h_a5b474ea4c4c40b5fa69b2f35f14f40ca}{cursor\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em x location to start print()ing text \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_t7735_8h_a23e124fd7b751475406a3940ada3aea4}\label{_s_t7735_8h_a23e124fd7b751475406a3940ada3aea4}} 
+int16\+\_\+t \mbox{\hyperlink{_s_t7735_8h_a23e124fd7b751475406a3940ada3aea4}{cursor\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em y location to start print()ing text \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_t7735_8h_a31ef40b2ca90f868c7d76754d0100c3b}\label{_s_t7735_8h_a31ef40b2ca90f868c7d76754d0100c3b}} 
+uint8\+\_\+t \mbox{\hyperlink{_s_t7735_8h_a31ef40b2ca90f868c7d76754d0100c3b}{rotation}}
+\begin{DoxyCompactList}\small\item\em Display rotation (0 thru 3) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_t7735_8h_a1b5971beb6c002049fa36acbc46a5418}\label{_s_t7735_8h_a1b5971beb6c002049fa36acbc46a5418}} 
+uint8\+\_\+t \mbox{\hyperlink{_s_t7735_8h_a1b5971beb6c002049fa36acbc46a5418}{\+\_\+colstart}}
+\begin{DoxyCompactList}\small\item\em Some displays need this changed to offset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_t7735_8h_af985d18dbe0f9a64d3ebea217497bfd2}\label{_s_t7735_8h_af985d18dbe0f9a64d3ebea217497bfd2}} 
+uint8\+\_\+t \mbox{\hyperlink{_s_t7735_8h_af985d18dbe0f9a64d3ebea217497bfd2}{\+\_\+rowstart}}
+\begin{DoxyCompactList}\small\item\em Some displays need this changed to offset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_t7735_8h_a01c1670650c407874aed6192d9b1581b}\label{_s_t7735_8h_a01c1670650c407874aed6192d9b1581b}} 
+uint8\+\_\+t {\bfseries \+\_\+xstart}
+\item 
+\mbox{\Hypertarget{_s_t7735_8h_aa5fe260259785eb5316e91adf9b0ddbb}\label{_s_t7735_8h_aa5fe260259785eb5316e91adf9b0ddbb}} 
+uint8\+\_\+t {\bfseries \+\_\+ystart}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Plik zawiera prototypy funkcji pliku \mbox{\hyperlink{_s_t7735_8c}{ST7735.\+c}}. 
+
+
+\begin{DoxyItemize}
+\item Created on\+: May 4, 2021 Author\+: KUBA 
+\end{DoxyItemize}

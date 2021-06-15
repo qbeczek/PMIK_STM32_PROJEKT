@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    bmp280_read.c
-  * @brief   Plik zawieta konfiguracje czujnika BMP280 oraz funkcje, które odczytują temperaturę i ciśnienie
+  * @brief   Plik zawiera konfiguracje czujnika BMP280 oraz funkcje, które odczytują temperaturę i ciśnienie
   ******************************************************************************
   */
 

@@ -1,9 +1,10 @@
-/*
- * printf_to_UART.c
- *
- *  Created on: Jun 15, 2021
- *      Author: KUBA
- */
+/**
+  ******************************************************************************
+  * @file    printf_to_UART.c
+  * @brief   Plik zawieta pomocniczą funkcję do przekierowania stdin z funkcji printf na uart.
+  ******************************************************************************
+  *
+  */
 #include "usart.h"
 
 int __io_putchar(int ch) {

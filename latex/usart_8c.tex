@@ -1,0 +1,61 @@
+\hypertarget{usart_8c}{}\doxysection{Dokumentacja pliku D\+:/\+Studia/\+S5/\+PMIK/workspace\+\_\+\+IDE/12\+\_\+\+ST7735/\+Core/\+Src/usart.c}
+\label{usart_8c}\index{D:/Studia/S5/PMIK/workspace\_IDE/12\_ST7735/Core/Src/usart.c@{D:/Studia/S5/PMIK/workspace\_IDE/12\_ST7735/Core/Src/usart.c}}
+
+
+This file provides code for the configuration of the USART instances.  
+
+
+{\ttfamily \#include \char`\"{}usart.\+h\char`\"{}}\newline
+\doxysubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{usart_8c_a9acb14595bfb9523655370c1bb477506}\label{usart_8c_a9acb14595bfb9523655370c1bb477506}} 
+\#define {\bfseries TEMP\+\_\+\+MAX}~INT8\+\_\+C(30)
+\item 
+\mbox{\Hypertarget{usart_8c_ad7d20c7d1ec1729bf6892ddabbac3ab0}\label{usart_8c_ad7d20c7d1ec1729bf6892ddabbac3ab0}} 
+\#define {\bfseries TEMP\+\_\+\+MIN}~INT8\+\_\+C(15)
+\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{usart_8c_a052088fe5bb3f807a4b2502e664fd4fd}\label{usart_8c_a052088fe5bb3f807a4b2502e664fd4fd}} 
+void {\bfseries MX\+\_\+\+USART2\+\_\+\+UART\+\_\+\+Init} (void)
+\item 
+void \mbox{\hyperlink{group___u_a_r_t___exported___functions___group1_ga0e553b32211877322f949b14801bbfa7}{HAL\+\_\+\+UART\+\_\+\+Msp\+Init}} (\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} $\ast$uart\+Handle)
+\item 
+void \mbox{\hyperlink{group___u_a_r_t___exported___functions___group1_ga718f39804e3b910d738a0e1e46151188}{HAL\+\_\+\+UART\+\_\+\+Msp\+De\+Init}} (\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} $\ast$uart\+Handle)
+\item 
+void \mbox{\hyperlink{usart_8c_a54198a03c59ca64313d079bffe1d47c5}{send\+Message}} (void)
+\begin{DoxyCompactList}\small\item\em Funkcja wysyłająca wiadomości na UART -\/ wywoływana w przerwaniu TIM. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{usart_8c_aa9479c261d65eecedd3d9582f7f0f89c}\label{usart_8c_aa9479c261d65eecedd3d9582f7f0f89c}} 
+\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} {\bfseries huart2}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+This file provides code for the configuration of the USART instances. 
+
+\begin{DoxyAttention}{Uwaga}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2021 STMicroelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under BSD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause 
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{usart_8c_a54198a03c59ca64313d079bffe1d47c5}\label{usart_8c_a54198a03c59ca64313d079bffe1d47c5}} 
+\index{usart.c@{usart.c}!sendMessage@{sendMessage}}
+\index{sendMessage@{sendMessage}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{sendMessage()}{sendMessage()}}
+{\footnotesize\ttfamily void send\+Message (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Funkcja wysyłająca wiadomości na UART -\/ wywoływana w przerwaniu TIM. 
+
+\begin{DoxyReturn}{Zwraca}
+void 
+\end{DoxyReturn}
