@@ -108,7 +108,6 @@ int main(void) {
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 	while (1) {
-
 		if ((errTemp = BMP280_TempRead(&temp)) == BMP280_OK && (errPres =
 				BMP280_PressRead(&pres)) == BMP280_OK) {
 
@@ -209,7 +208,7 @@ void SystemClock_Config(void) {
  * @name functions to return global variables temp
  *
  */
-double returnTemp(void){
+double returnTemp(void) {
 	return temp;
 }
 
@@ -217,7 +216,7 @@ double returnTemp(void){
  * @name function to return global variables pres
  *
  */
-double returnPres(void){
+double returnPres(void) {
 	return pres;
 }
 /* USER CODE END 4 */

@@ -37,13 +37,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  0001b220  00000000  00000000  0004a540  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0001cd7f  00000000  00000000  00065760  2**0
+ 17 .debug_line   0001cd7d  00000000  00000000  00065760  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000952c3  00000000  00000000  000824df  2**0
+ 18 .debug_str    000952c3  00000000  00000000  000824dd  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  001177a2  2**0
+ 19 .comment      00000053  00000000  00000000  001177a0  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00006994  00000000  00000000  001177f8  2**2
+ 20 .debug_frame  00006994  00000000  00000000  001177f4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -4826,11 +4826,11 @@ int main(void) {
 	ST7735_SetRotation(3);
  8002626:	2003      	movs	r0, #3
  8002628:	f7fe fd96 	bl	8001158 <ST7735_SetRotation>
+	/* USER CODE END 2 */
 
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 	while (1) {
-
 		if ((errTemp = BMP280_TempRead(&temp)) == BMP280_OK && (errPres =
  800262c:	4866      	ldr	r0, [pc, #408]	; (80027c8 <main+0x1d8>)
  800262e:	f7ff fe1d 	bl	800226c <BMP280_TempRead>
@@ -5194,7 +5194,7 @@ void SystemClock_Config(void) {
  * @name functions to return global variables temp
  *
  */
-double returnTemp(void){
+double returnTemp(void) {
  80028c4:	b480      	push	{r7}
  80028c6:	af00      	add	r7, sp, #0
 	return temp;
@@ -5216,7 +5216,7 @@ double returnTemp(void){
  * @name function to return global variables pres
  *
  */
-double returnPres(void){
+double returnPres(void) {
  80028e8:	b480      	push	{r7}
  80028ea:	af00      	add	r7, sp, #0
 	return pres;
@@ -6763,10 +6763,10 @@ void sendMessage(void) {
  80031aa:	e9d7 2302 	ldrd	r2, r3, [r7, #8]
  80031ae:	481c      	ldr	r0, [pc, #112]	; (8003220 <sendMessage+0xa0>)
  80031b0:	f004 f81e 	bl	80071f0 <iprintf>
+	} else if (temp < TEMP_MIN) {
+		printf("ZA NISKA TEMPERATURA W POMIESZCZENIU  -> TEMP: %.2f\r\n", temp);
 	} else if (temp > TEMP_MIN && temp < TEMP_MAX) {
-		printf("Aktualna temperatura w pokoju: %.2f [st. C] \t cisnienie: %.2f [Pa] \r\n",
-				temp, pres);
-
+		printf("Aktualna temperatura w pokoju: %.2f [st. C] \t cisnienie: %.2f [Pa] \r\n", temp, pres);
 	}
 }
  80031b4:	e02e      	b.n	8003214 <sendMessage+0x94>
@@ -6804,7 +6804,7 @@ void sendMessage(void) {
  80031fe:	d100      	bne.n	8003202 <sendMessage+0x82>
 }
  8003200:	e008      	b.n	8003214 <sendMessage+0x94>
-		printf("Aktualna temperatura w pokoju: %.2f [st. C] \t cisnienie: %.2f [Pa] \r\n",
+		printf("Aktualna temperatura w pokoju: %.2f [st. C] \t cisnienie: %.2f [Pa] \r\n", temp, pres);
  8003202:	e9d7 2300 	ldrd	r2, r3, [r7]
  8003206:	e9cd 2300 	strd	r2, r3, [sp]
  800320a:	e9d7 2302 	ldrd	r2, r3, [r7, #8]
