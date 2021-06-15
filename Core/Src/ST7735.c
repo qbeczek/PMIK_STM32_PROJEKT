@@ -1,3 +1,9 @@
+/**
+  ******************************************************************************
+  * @file    ST7735.c
+  * @brief   Plik zawiera definicje oraz funckje potrzebne do sterowania wyświetlaczem ST7735
+  *****************************************************************************
+**/
 #include <ST7735.h>
 
   const uint8_t

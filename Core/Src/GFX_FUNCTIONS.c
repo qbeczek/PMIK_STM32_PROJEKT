@@ -1,9 +1,10 @@
-/*
- * GFX_FUNCTIONS.c
- *
- *  Created on: 30-Oct-2020
- *      Author: meh
- */
+/**
+  ******************************************************************************
+  * @file    GFX_FUNCTIONS.c
+  * @brief   Plik zawiera funkcje wyświetlacza ST7735
+  ******************************************************************************/
+
+
 
 #include <ST7735.h>
 #include "stdint.h"
