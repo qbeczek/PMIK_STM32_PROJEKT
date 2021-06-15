@@ -1,20 +1,20 @@
-/*
- * temp.c
- *
- *  Created on: Jun 8, 2021
- *      Author: KUBA
- */
-/*!
- *  @brief
- */
+/**
+  ******************************************************************************
+  * @file    bmp280_read.c
+  * @brief   Plik zawieta konfiguracje czujnika BMP280 oraz funkcje, które odczytują temperaturę i ciśnienie
+  ******************************************************************************
+  */
 
 #include <bmp280_read.h>
 
 struct bmp280_dev bmp;
 
-/*
- * Funkcja inicjalizująca czujnik bmp280
- * Zwracana wartość rslt to kod błędu w przypadku błędu inicjalizacji
+/*!
+ * @brief Funkcja inicjalizująca czujnik BMP280
+ *
+ *
+ * @return zwracana wartość to ewentualne kody błędów
+ * @retval zero oznacza sukces, inne wartości to kody błędów.
  */
 int8_t BMP280_init(void) {
 	int8_t rslt;
@@ -60,9 +60,13 @@ int8_t BMP280_init(void) {
 	return rslt;
 
 }
-/*
- * Funkcja odczytuje temperature z czujnika i przypisuje je do zmiennej globalnej
- * Zwracana wartość rslt to kod błędu przy złym odczycie
+/*!
+ * @brief Funkcja odczytuje temperature z czujnika BMP280 wykorzystując funkcje z bibliotek bmp280.c
+ *
+ * @param[out] temperature : wskaźnik na zmienną globalną temp - globalne przypisanie wartości temperatury
+ *
+ * @return zwracana wartość to ewentualne kody błędów
+ * @retval zero oznacza sukces, inne wartości to kody błędów.
  */
 int8_t BMP280_TempRead(double *temperature) {
 	int8_t errGet = 0;
@@ -84,9 +88,13 @@ int8_t BMP280_TempRead(double *temperature) {
 	return errComp;
 }
 
-/*
- * Funkcja odczytuje cisnienie z czujnika i przypisuje je do zmiennej globalnej
- * Zwracana wartość rslt to kod błędu przy złym odczycie
+/*!
+ * @brief Funkcja odczytuje ciśnienie z czujnika BMP280 wykorzystując funkcje z bibliotek bmp280.c
+ *
+ * @param[out] pressure : wskaźnik na zmienną globalną pres - globalne przypisanie wartości ciśnienia
+ *
+ * @return zwracana wartość to ewentualne kody błędów
+ * @retval zero oznacza sukces, inne wartości to kody błędów.
  */
 int8_t BMP280_PressRead(double *pressure) {
 	int8_t errGet = 0;
@@ -163,26 +171,3 @@ int8_t i2c_reg_read(uint8_t i2c_addr, uint8_t reg_addr, uint8_t *reg_data,
 	HAL_I2C_Mem_Read(&hi2c1, i2c_addr, reg_addr, 1, reg_data, length, 100);
 	return 0;
 }
-
-/*!
- *  @brief Function for writing the sensor's registers through SPI bus.
- *
- *  @param[in] cs           : Chip select to enable the sensor.
- *  @param[in] reg_addr     : Register address.
- *  @param[in] reg_data : Pointer to the data buffer whose data has to be written.
- *  @param[in] length       : No of bytes to write.
- *
- *  @return Status of execution
- *  @retval 0 -> Success
- *  @retval >0 -> Failure Info
- *
- */
-
-/*!
- *  @brief Prints the execution status of the APIs.
- *
- *  @param[in] api_name : name of the API whose execution status has to be printed.
- *  @param[in] rslt     : error code returned by the API whose execution status has to be printed.
- *
- *  @return void.
- */
